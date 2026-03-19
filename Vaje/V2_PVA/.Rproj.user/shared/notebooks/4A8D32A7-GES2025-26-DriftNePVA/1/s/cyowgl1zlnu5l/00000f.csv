@@ -1,4 +1,0 @@
-"0","plot.Fe=qplot(year,Fe,data=Fe,geom=""line"",alpha=0.5,ylab = ""Efektivni koeficient sokrvja (Fe)"",   xlab=""Leto"",ylim=c(0.15,0.3))+ "
-"0","  geom_point(aes(y=Fe),shape=3,size=1) + "
-"0","  theme_bw() + theme(legend.position=""none"") #+geom_line(aes(y=Fi),colour=""black"")"
-"0","plot.Fe+xlim(1985, 2020)+ylim(0.15, 0.5)"

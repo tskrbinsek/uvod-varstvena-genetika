@@ -1,4 +1,0 @@
-"0","risi = df2genind(risi.uvoz[,9:28],sep="" "",ind.names=risi.uvoz$Sample)"
-"0","risi@other=risi.uvoz[,2:8]"
-"0",""
-"0","pop(risi)=risi.uvoz$Population"

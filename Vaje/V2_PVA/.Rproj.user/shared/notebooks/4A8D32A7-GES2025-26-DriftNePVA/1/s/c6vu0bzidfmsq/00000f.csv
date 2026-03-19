@@ -1,5 +1,0 @@
-"0","FeSim = HFDataSimMulti(Ne=22, R=40,StartYear = 1990, EndYear = 2008, G=3, Hs = 0.495, Htot = 0.594, Nsim=50)"
-"0","FeSim2 = HFDataSimMulti(Ne=11, R=40,StartYear = 2002, EndYear = 2011, G=3, Hs = 0.455, Htot = 0.594, Nsim=50)"
-"0",""
-"0","plot.Fe + geom_line(aes(x=year, y=plInbr, group=iter), data=FeSim, color=""green"", alpha = 0.2)+"
-"0","          geom_line(aes(x=year, y=plInbr, group=iter), data=FeSim2, color=""red"", alpha = 0.2)+ylim(0.1,0.45)"

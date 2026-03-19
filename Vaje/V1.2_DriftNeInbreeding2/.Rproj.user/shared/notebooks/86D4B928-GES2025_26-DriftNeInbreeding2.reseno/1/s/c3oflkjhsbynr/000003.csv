@@ -1,4 +1,0 @@
-"0","hist(risi@other$Year, breaks=30, xlab = ""leto"", ylab=""frekvenca"", main=""Vzorci risov, po letu smrti"")
-"
-"2","Error in gzfile(file, ""wb"") : cannot open the connection
-"

@@ -1,2 +1,0 @@
-"0","risi.uvoz = read.table(""PodatkiRis.txt"",colClasses = ""character"",sep=""\t"",header=T)"
-"0","risi.uvoz$Year = as.numeric(risi.uvoz$Year)"
