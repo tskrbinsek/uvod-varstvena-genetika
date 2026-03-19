@@ -1,0 +1,180 @@
+---
+title: "GENETSKA STRUKTURA POPULACIJE, VAJA 3.2 - DINARSKI VOLKOVI - REŠENO"
+author: "Tomaž Skrbinšek"
+date: "3. november 2025"
+output: html_document
+---
+
+###Genetika v ekologiji in sistematiki
+###Oddelek za biologijo, BF, Univerza v Ljubljani
+###Študijsko leto 2025/2026
+
+# Raziskovanje populacijske strukture pri dinarskih volkovih
+#REŠENA VAJA! SKOPIRAJ V FOLDER S .PRJ DATOTEKO, DRUGAČE NE BO DELALO.
+
+## Opis vaje
+
+V vaji bomo raziskovali genetsko strukturo na precej manjši prostorski ravni kot smo to počeli pri Gepardih - gledali bomo volkove v Dinaridih. Podatki so dejanski genotipi volkov iz Slovenije in Hrvaške, zraven so tudi "metapodatki" - podatki o vsakem posameznem vzorcu. Originalni podatki vsebujejo tudi genotipe psov in križancev in jih bomo morda podrobneje pogledali naslednjič.
+
+Najprej naložimo podatke. Lahko pogledate vsak objekt, kako podatki zgledajo.
+
+```{r GetData}
+library(adegenet)
+library(spdep)
+
+DinaricWolves.Metadata = read.table("DinaricWolves.Metadata.txt", header=T, stringsAsFactors = T)
+DinaricWolves.Genotypes = read.table("DinaricWolves.Genotypes.txt", header=T, stringsAsFactors = T)
+
+#še nekaj funkcij iz domače kuhinje, ki jih bomo potrebovali
+source("Functions_WolfHybridizationStructure.R")
+```
+
+Pri R-u pogosto "plonkamo" - vzamemo kodo, ki smo jo že kdaj uporabili pri podobnih analizah, si jo skopiramo in prilagodimo. Odprite tisto vajo z gepardi (.Rmd datoteko) kar iz "files" zavihka desno, da boste lahko kopirali sem.
+
+Spet naredimo 'genind' objekt - tega potrebujemo, da bo R vedel kako naj uporablja naše podatke v funkcijah. Dajmo mu ime 'DinaricWolves' (pazite na velike in male črke!). Za imena osebkov pri izdelavi objekta uporabite stolpec 'AnimalID' iz 'DinaricWolves.Metadata'.
+
+```{r}
+DinaricWolves=df2genind(DinaricWolves.Genotypes,sep=" ",ind.names=DinaricWolves.Metadata$AnimalID)
+```
+
+
+Zdaj bomo skupaj dali v predalček 'other' še ostale metapodatke iz 'DinaricWolves.Metadata'. Tokrat bomo spravili v `@other$metadata` vse metapodatke razen koordinat, koordinate pa v `@other$xy`, da bomo lahko kasneje uporabljali prostorsko eksplicitne metode. Tokrat smo @other organizirali kot `list` objekt - v 'predalček' @other smo dali še dve škatli, `$metadata` in `$xy`
+
+```{r}
+other(DinaricWolves)=list(metadata=DinaricWolves.Metadata[,1:19],xy=DinaricWolves.Metadata[,20:21])
+```
+
+
+### Nekaj populacijske genetike
+
+
+Tole boste z nekaj plonkanja spravili skupaj sami.
+
+Naredite povzetek genetskih podatkov volkov v objekt 'wolves.smry', narišite graf Ho/He. Lahko plonkate iz gepardov :).
+
+```{r}
+wolves.smry=summary(DinaricWolves)#povzetek podatkov
+
+#spet pogledamo razliko med opaženo in pričakovano heterozigotnostjo.
+plot(wolves.smry$Hobs, wolves.smry$Hexp, xlab="Hobs",ylab="Hexp", main="Opažena/Pričakovana Heterozigotnost",xlim=c(0.4,1),ylim=c(0.4,1))
+abline(0,1,col="red")
+```
+
+Ali vidite mogoče sistematično odstopanje? Komentirajte... je podobno kot pri gepardih?
+
+Naredite še HWE test. Ni potrebno pisati p-vrednosti v tabelo z lokusi, samo da vidimo... kako zgleda? Ne pozabite na knjižnico 'pegas', v kateri je funkcionalnost, ki jo potrebujete.
+
+```{r}
+library(pegas)
+#test HWE. Za več informacij natipkaj '?hw.test' v konzolo.
+HWE=hw.test(DinaricWolves) 
+HWE
+```
+
+Zdi se, da precej lokusov odstopa od HWE. Populacijska struktura je gotovo ena izmed razlag - gremo raziskat.
+
+### Analiza osnovnih komponent - PCA (Principal Component Analysis)
+
+Naredimo podobno kot pri gepardih enostavno PCA:
+
+```{r, warning=F}
+#manjkajoče podatke (luknje v genotipih) damo na "povprečje".
+X=scaleGen(DinaricWolves,NA.method="mean")
+
+#naredimo PCA (funkcija dudi.pca). Tokrat bo naredilo "interaktivno" - narisal nam bo graf lastnih vrednosti in vprašali koliko osi naj zapiše v "li".
+pca1 <- dudi.pca(X, nf=3, scannf = F)
+
+barplot(pca1$eig[1:50],main="PCA Eigenvalues", col=heat.colors(50))
+```
+
+Zdi se, da bi lahko morda razložili prve tri komponente. Gremo pogledat, ali vidimo kak vzorec in obarvajmo vzorce glede na lokacijo (regijo).
+
+Uporabite funkcijo 's.class' iz gepardov in narišite osi c(1,2), in c(1,3). Kot faktor (fac) uporabite `other(DinaricWolves)$metadata$region` (regija, pospravljena v predalčku` @other$metadata`. 
+
+
+```{r}
+s.class(pca1$li[,1:2], fac=other(DinaricWolves)$metadata$Region,clabel=0.7,col=seasun(7), sub="PCA, os 1+2")
+s.class(pca1$li[,c(1,3)], other(DinaricWolves)$metadata$Region,clabel=0.7,col=virid(7), sub="PCA, os 1+3")
+s.class(pca1$li[,c(2,3)], other(DinaricWolves)$metadata$Region,clabel=0.7,col=funky(7), sub="PCA, os 2+3")
+```
+
+
+Slovenija je malo čudna, ampak je verjetno preintenzivno vzorčena - povzorčili smo praktično vse osebke v letih 2010 - 2013 tako da je zelo verjetno, da vidimo že družinsko strukturo (veliko sorodnikov prvega reda - bratov/sester/očetov/mater).
+
+Vidimo vzorec, in sovpada z geografijo. Ampak gremo vključiti prostor eksplicitno - uporabimo **sPCA**.
+
+### sPCA - Spatial Principal Component Analysis (prostorska analiza osnovnih komponent)
+
+sPCA je razmeroma nova metoda, ki eksplicitno obravnava tako prostorske kot genetske korelacije. Pomembne prednosti so, da je razmeroma malo predpostavk (npr. ne uporablja HWE kot signal) in lahko zazna različne prostorske vzorce strukture (npr. prehode, lokalno/globalno strukturo itd.)
+
+Poženi (ctrl-enter) spodnjo vrstico, če te zanima članek.
+
+shell.exec("Jombart2008.sPCA.pdf")
+
+
+Najprej moramo organizirati podatke - odstraniti vzorce brez koordinat in dodati nekaj nakjučnega šuma za vzorce, ki imajo zabeležene identične koordinate (kar se dogaja). 
+
+```{r}
+#Uredimo stolpce s koordinatami, odstranimo vzorce brez koordinat
+names(DinaricWolves$other$xy)=c("x","y")
+DinaricWolves=DinaricWolves[!is.na(DinaricWolves$other$xy$x)]
+
+#dodajmo naključni šum 100 m - nima nobenega vpliva na rezultate, metoda pa bo delala
+DinaricWolves@other$xy$x = jitter(DinaricWolves@other$xy$x,amount=100)
+DinaricWolves@other$xy$y = jitter(DinaricWolves@other$xy$y,amount=100)
+```
+
+sPCA uporablja 'mrežo povezav' (connection network) in z njo razloži prostorsko korelacijo med vzorci. Obstaja več metod kako narediti takšno mrežo, kar je včasih lahko koristno, da lahko biologijo vrste vključimo v model. Volkovi so odlični dispergerji, zato lahko uporabimo enostavno metodo (Delaunay-eva triangulacija).
+
+```{r, message=F, warning=F}
+#odkomentirajte tole spodaj, če želite "ne-interaktivno" narediti sPCA objekt.
+#DinaricWolves.graph <- chooseCN(other(DinaricWolves)$xy,type=1, plot=T, res="listw") #type 1 = Delaunay
+#DinaricWolves.spca1 <- spca(DinaricWolves, cn=DinaricWolves.graph, scannf=FALSE, nfposi=3,nfnega=0)
+
+DinaricWolves.spca1 <- spca(DinaricWolves)
+```
+
+Gremo pogledat rezultate....
+
+```{r, message=F, warning=F}
+#Lastne vrednosti (eigenvalues)
+barplot(DinaricWolves.spca1$eig, col=rep(c("red","grey"), c(3,1000)), main="Dinarski volkovi - sPCA lastne vrednosti")
+screeplot(DinaricWolves.spca1)
+
+```
+
+Kot vidite so tukaj tudi negativne lastne vrednosti. Te kažejo negativno prostorsko korelacijo in kažejo na *lokalno* strukturo (velike genetske razlike na kratki razdalji), ampak tega v naših podatkih ne vidimo. Pozitivne vrednosti kažejo na *globalno strukturo* in imamo tri komponente, ki se zdijo jasno interpretabilne.
+
+Poglejmo rezultate prostorsko.
+
+```{r}
+#par(mfrow=c(2,2))
+#sPCA - prva komponenta
+plotmap("Komponenta 1",xlim=c(402000, 785000), ylim=c(-253000,140000), scaleloc=c(402000,-253000))
+s.value(DinaricWolves$other$xy, DinaricWolves.spca1$ls[,1], add.p=T, csize=0.3)
+
+#sPCA - druga komponenta
+plotmap("Komponenta 2",xlim=c(402000, 785000), ylim=c(-253000,140000), scaleloc=c(402000,-253000))
+s.value(DinaricWolves$other$xy, DinaricWolves.spca1$ls[,2], add.p=T, csize=0.5)
+
+#sPCA - tretja komponenta
+plotmap("Komponenta 3",xlim=c(402000, 785000), ylim=c(-253000,140000), scaleloc=c(402000,-253000))
+s.value(DinaricWolves$other$xy, DinaricWolves.spca1$ls[,3], add.p=T, csize=0.5)
+
+#Colorplot, vse tri komponente
+plotmap("Vse tri komponente",xlim=c(402000, 785000), ylim=c(-253000,140000), scaleloc=c(402000,-253000))
+colorplot(DinaricWolves$other$xy, DinaricWolves.spca1$ls[,1:3], axes=1:3, transp=TRUE, cex=2, add.plot = T)
+par(mfrow=c(1,1))
+```
+
+Zdi se, da prva komponenta opisuje populacijsko strukturo v Dinaridih. Druga in tretja se zdi da opisujeta družinsko strukturo na (prekomerno vzorčenem) severu. 
+
+Torej, končna karta:
+
+```{r}
+#sPCA - populacijska struktura v Dinaridih
+plotmap("Populacijska struktura v Dinaridih (sPCA, komp. 1)",xlim=c(402000, 785000), ylim=c(-253000,140000), scaleloc=c(402000,-253000))
+s.value(DinaricWolves$other$xy, DinaricWolves.spca1$ls[,1], add.p=T, csize=0.3)
+```
+
+###

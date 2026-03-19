@@ -1,0 +1,12 @@
+"1","
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYmFycGxvdCh0YWJsZShjaGVldGFoQG90aGVyJEFyZWEpLCBjb2w9ZnVua3koMjApLCBsYXM9MywgeWxhYj1cIsWgdGV2aWxvIHZ6b3JjZXZcIikgI8WhdGV2aWxvIHZ6b3JjZXYgcG8gb2Jtb8SNanVcbmBgYCJ9 -->
+
+```r
+barplot(table(cheetah@other$Area), col=funky(20), las=3, ylab=\"Število vzorcev\") #število vzorcev po območju
+```
+
+<!-- rnb-source-end -->
+"
+"0","```r
+barplot(table(cheetah@other$Area), col=funky(20), las=3, ylab=\"Število vzorcev\") #število vzorcev po območju
+```"

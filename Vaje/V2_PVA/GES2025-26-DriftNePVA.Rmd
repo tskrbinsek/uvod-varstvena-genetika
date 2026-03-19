@@ -1,0 +1,344 @@
+---
+title: 'GES 2025-2026, vaja 2, nadaljevanje: SOKRVJE, GENETSKI ZDRS (INBREEDING, DRIFT) IN VIABILNOST POPULACIJE'
+date: "27. 10. 2025"
+output: html_notebook
+---
+
+##VAJA: Sokrvje v realnih populacijah
+
+
+To je nadaljevanje prejšnje vaje, ki se nadaljuje tam, kjer smo na vajah končali z analizo rasti sokrvja pri dinarskih risih.
+
+Prvi "chunk" je za tiste, ki boste to poganjali doma. Samo umaknite tiste "lojtra" (#) znake in zaženite chunk, pa bo R poinstaliral knjižnice, ki jih potrebujete.
+
+```{r InstalacijaPaketov}
+#install.packages("ggplot2")
+#install.packages("adegenet")
+#install.packages("gridExtra")
+#install.packages("pegas")
+```
+
+
+Naložili bomo potrebne pakete in nekatere doma pečene funkcije (iz datoteke VajeInbreedingDrift_Funkcije.R)
+```{r setup}
+library(ggplot2)
+library(adegenet)
+library(gridExtra)
+library(pegas)
+source(".\\VajeInbreedingDrift_Funkcije.R", echo=F, encoding = "UTF-8")
+source(".\\Vaja9NePVA_Funkcije.R", echo=F, encoding = "UTF-8")
+```
+
+
+Najprej gremo na hitro pogledat kaj smo naredili prejšnjikrat in si obnoviti podatke.
+
+```{r RisiUvozPodatkov, echo=FALSE, message=F, results=F}
+risi.uvoz = read.table(".\\PodatkiRis.txt",colClasses = "character",sep="\t",header=T)
+risi.uvoz$Year = as.numeric(risi.uvoz$Year)
+risi = df2genind(risi.uvoz[,9:28],sep=" ",ind.names=risi.uvoz$Sample)
+risi@other=risi.uvoz[,2:8]
+pop(risi)=risi.uvoz$Population
+risi.sum=summary(risi)
+risi1.gen = risi[,loc=-c(20,14)] #brez Lc106 in Fca567
+risi2.gen = risi1.gen[!is.na(risi1.gen$other$Year)] #vržemo ven manjkajoče vrednosti 
+timechange.30=get.window(risi2.gen,30)
+
+```
+
+Malo bomo osvežili spomin...
+
+Narišemo graf heterozigotnosti (He/Ho) po mediani leta. Plot si bomo shranili v objekt HeHoPlot. 
+
+```{r warning=F}
+HeHoPlot=qplot(meanyear,Hobs,data=timechange.30[[1]],geom="line",ylab = "polno:Ho   črtkano:He", 
+      xlab="Povprečje letnice smrti osebka v podvzorcu", 
+      main="Opažena in pričakovana heterozigotnost\npodvzorci po 30 osebkov potujoče okno (v času)") +
+      geom_point(aes(y=Hobs),shape=5,size=1.5)+ 
+      geom_line(aes(y=Hexp),linetype="longdash")+geom_point(aes(y=Hexp),shape=2,size=1.5) + 
+      theme(legend.position = "none") + theme_bw() 
+
+HeHoPlot #Narišemo plot (zdaj je shranjen!)
+
+```
+
+
+V prvih letih se Ho in He razhajata - kako zgleda Fis?
+
+```{r Risi_FisPlot}
+
+ggplot(data=timechange.30[[1]], aes(x=meanyear, y=1-(Hobs/Hexp)))+
+  geom_line()+ geom_point(shape=5,size=1.5) + 
+  ylab("polno:Ho   črtkano:He") + 
+  xlab("povprečje letnice smrti osebka v podvzorcu") + 
+  ggtitle("Fis\npodvzorci po 30 osebkov potujoče okno (v času)") +
+  theme(legend.position = "none") 
+
+```
+
+Gre za "okna" s po 30 vzorci. Še enkrat časovna razporeditev vzorcev:
+
+```{r Risi_VzorciCas2}
+hist(risi2.gen@other$Year, breaks=30, xlab = "leto", main="Vzorci risov, po letu smrti")
+```
+# TUKAJ SE NADALJUJE OD PREJŠNJE VAJE
+
+
+Poglejmo še s številkami kako pada heterozigotnost.
+
+```{r Risi_HeDropPlot}
+tc30.summ=timechange.30[[1]]
+HeDrop=NULL
+for (i in seq(1989,2005,4)) HeDrop=c(HeDrop,mean(tc30.summ$Hexp[round(tc30.summ$meanyear,0)==i]))
+HeDrop=data.frame(year=seq(1989,2005,4), He=HeDrop)
+HeDrop
+```
+
+Efektiven faktor sokrvja (Fe) \~ Fst če je Fis \~ 0. *Fe = 1-Hs/Ht* *Ht* je v tem primeru heterozigotnost izvorne populacije v Karpatih na istih lokusih = 0.594.
+
+### NALOGA E
+
+Izračunaj efektivni koeficient sokrvja za obdobje 1979-1990. *Namig:* R lahko uporabljate kot kalkulator, preprosto napišite račun in stisnite CTRL-Enter na vrstici z računom.
+
+```{r NalogaE}
+
+
+```
+
+### Naloga F
+
+Izračunaj efektivni koeficient sokrvja za zadnje obdobje, 1999-2010. Namig: lahko copy-paste kode od prej in spremeniš letnice.
+
+```{r NalogaF}
+
+
+
+```
+
+Gremo izrisati efektiven koeficient sokrvja po časovnih oknih.
+
+```{r Risi_PlotFe}
+Fe = 1-(timechange.30[[1]]$Hexp/0.594)
+Fe=data.frame(Fe,Hexp=timechange.30[[1]]$Hexp,year=timechange.30[[1]]$meanyear)
+Fe=data.frame(delta_r = Fe$Fe/0.1*25,Fe)
+
+plot.Fe=ggplot(data=Fe, aes(x=year,y=Fe))+
+  geom_line(alpha=0.5)+
+  geom_point(shape=1,size=1) + 
+  ylab("Efektivni koeficient parjenja v sorodstvu (Fe)")+
+  xlab("Leto") +
+  ylim(0.15,0.3) + 
+  ggtitle("Rast sokrvja (Fe),\npotujoče okno, podvzorec 30 osebkov (po času)") +
+  theme(legend.position="none") +theme_bw()
+
+plot.Fe
+```
+
+### Naloga G
+
+Pri metaanalizi večjega števila študij različnih vrst sta Crnokrak in Roff (1999) ugotovila 25% padec fitnesa pri rasti sokrvja za 0.1 pri divjih populacijah. Izračunaj, kolikšen je fitnes Dinarskih risov glede na izvorno populacijo v karpatih v destletju 1979-1990 in kakšen v zadnjem desetletju - 1999-2010.
+
+```{r NalogaG}
+
+
+
+```
+
+Gremo bolje pogledati fitnes.
+
+```{r Risi_Fitnes}
+Fitness = 1-(0.25*Fe$Fe/0.1)
+Fitness = data.frame (year=floor(Fe$year),Fitness)
+Fitness
+```
+
+Plot - pričakovani padec fitnesa.
+
+```{r Risi_PadecFitnesa}
+plot.fitness = ggplot(data=Fitness, aes(x=year, y=Fitness)) +
+  geom_line(alpha=0.5) +
+  geom_point(aes(y=Fitness),shape=1,size=1) + 
+  geom_hline(yintercept=1,color="red") +
+  ylab("Fitnes dinarske populacije risa v primerjavi s karpatsko") +
+  xlab("Leto") +
+  ylim(0,1) + 
+  ggtitle("Fitnes (glede na izvorno populacijo)\npotujoče okno, podvzorci po 30 osebkov (po času)") +
+  theme(legend.position="none")  + theme_bw()
+
+multiplot(plot.Fe,plot.fitness,cols=2)
+```
+
+
+Iz sveta mačk imamo dobro preučen primer inbriding depresije pri floridskih panterjih. Populacija je bila na robu genetskega zloma, potem pa so "uvozili" nekaj osebkov sorodne podvrste iz Texasa. Zanimivo bi bilo izračunati efektiven faktor sokrvja in ga primerjati.
+
+### Naloga  
+Izračunaj efektivni faktor sokrvja pri floridskih panterjih (glej članek Johnson s sod. 2010, tabela na strani 1644, CFP = Canonical Florida Panther, TX = Texas). Kot zunanjo populacijo vzami čiste pume iz Teksasa. Kako je to primerljivo s faktorjem sokrvja pri naših risih?
+
+Efektivni faktor sokrvja (efektivni inbreeding, Fe) je pravzaprav Fst, če je Fis = 0 (kar pri nas je). Fe = 1 - (Hes/Het), kjer je Hes pričakovana heterozigotnost subpopulacije in Het pričakovana heterozigotnost celotne (ali donorske) populacije.
+
+```{r NalogaH}
+
+```
+
+
+### Naloga 
+Izračunaj efektivni faktor sokrvja pri Tx-BC (povratnih križancih). Kako se primerja z dinarskimi risi? Kak je bil učinek (glej 'Fig. 3' na strani 1644 članka)?
+
+```{r NalogaI}
+
+
+
+```
+
+
+## Računanje efektivne velikosti populacije in vpliv na genetsko pestrost, sokrvje in fitness
+
+R LAHKO UPORABLJATE KOT KALKULATOR - SAMO VPIŠITE RAČUN V SPODNJE OKNO ("Console") in stisnite Enter.
+
+#### Izračunamo ocene efektivne velikosti populacije.
+
+Uporabi **NeEstimator**! Zunanji software. 
+
+Najdete ga v mapi NeEstimator, v isti mapi, kjer je ta vaja. Zaženete .jar datoteko.
+
+Uporabili bomo metodo za oceno efektivne velikosti populacije (Ne) preko vezavnega neravnovesja ("Linkage Disequilibrium"). Selekcijsko neutralni okusi, ki so dovolj daleč narazen v genomu, bi se morali v velikih populacijah dedovati neodvisno en od drugega. Manjše kot so populacije, večja je povezanost (linkage) med lokusi, ker so osebki med seboj sorodni. To lahko uporabimo kot signal, s katerim ocenimo efektivno velikost populacije.
+
+Podatki so v datoteki LynxLynxLDNeData.gen. Datoteko si lahko odprete (je preprosta tekst datoteka), v prvi vrstici je opisana struktura podatkov - skupine genotipov (osebkov) v določenem časovnem obdobju, za katere bomo ocenili efektivno velikost populacije (Ne). To boste potrebovali za interpretacijo rezultatov.
+
+Zaženete .jar datoteko, da odprete program.
+
+Izberite samo "Linkage Disequilibrium" in "Random mating". Zraven je še nekaj metod, ki so pa manj primerne za naše podatke. Izberite datoteko s podatki (LynxLynxLDNeData.gen) in zaženite.
+
+Če boste imeli probleme s poganjanjem NeEstimator-ja, je datoteka z rezultati tudi v mapi "Backup" in si lahko pogledate rezultate.
+
+Najprej spet poglejmo plot heterozigotnosti od prej.
+
+```{r Risi_HeHoPlot2}
+HeHoPlot #Narišemo plot (zdaj je shranjen!)
+HeHoPlot+xlim(1985,2020)+ylim(0.35,0.55)
+```
+
+Simulirajmo drift in sokrvje glede na dejanske podatke o efektivni velikosti populacije. Vzamemo efektivno velikost populacije v prvem desetletju in povprečno heterozigotnost v prvem desetletju, potem pa poglejmo, ali realnost upošteva naše teoretične napovedi. :)
+
+Poglejmo najprej kako pada heterozigotnost. Vzorci so tokrat neodvisni, letnica (year) je povprečno leto vzorca.
+
+```{r HeDrop}
+tc30.summ=timechange.30[[1]]
+HeDrop=NULL
+for (i in seq(1989,2005,4)) HeDrop=c(HeDrop,mean(tc30.summ$Hexp[round(tc30.summ$meanyear,0)==i]))
+HeDrop=data.frame(year=seq(1989,2005,4), He=HeDrop)
+HeDrop
+
+```
+
+
+Zdaj uporabimo ocenjeno efektivno velikost (Ne) populacije v prvem desetletju in "startno" heterozigotnost (Hs) v letu 1990 (lahko uporabiš 1993 iz rezultatov prejšnjega chunk-a).
+
+VPIŠI OCENJENO Ne in Hs
+
+```{r Risi_HeHoNe}
+HoPadecSim = HFDataSim(Ne=___, R=1000,StartYear = 1990, EndYear = 2008, G=5, Hs = ___) #DOPOLNI  Ne IN Hs!
+HeHoPlot + geom_line(aes(x=year, y=plHet), data=HoPadecSim, color="red")
+```
+
+###NALOGA
+Naredi isti plot, ampak samo z 20 lokusi (R=20). Kaj opaziš? Poskusi večkrat zagnati simulacijo (ctrl-alt-c)
+
+```{r Naloga_J}
+#tvoja koda tukaj
+
+
+
+```
+
+
+Gremo zdaj večkrat pognati simulacijo s podobnim številom informacij, kot jih imamo dejansko v podatkih in pogledati, kje lahko pričakujemo genetsko pestrost.
+
+```{r Risi_HeHoNeMulti}
+nAll(risi2.gen)
+mean(nAll(risi2.gen))
+HePadecSim = HFDataSimMulti(Ne=22, R=40,StartYear = 1990, EndYear = 2008, G=3, Hs = 0.495, Htot = 0.594, Nsim=200)
+HeHoPlot + geom_line(aes(x=year, y=plHet,group=iter), data=HePadecSim, color="red", alpha = 0.1)
+```
+
+
+Kaj se pa dogaja s parjenjem v sorodstvu? Ali sledi teoretičnim napovedim efektivne velikosti popoulacije?
+Najprej si naredimo spet plot rasti sokrvja.
+
+```{r Risi_FNeSim2}
+plot.Fe=qplot(year,Fe,data=Fe,geom="line",alpha=0.5,ylab = "Efektivni koeficient sokrvja (Fe)",   xlab="Leto",ylim=c(0.15,0.3))+ 
+  geom_point(aes(y=Fe),shape=3,size=1) + 
+  theme_bw() + theme(legend.position="none") #+geom_line(aes(y=Fi),colour="black")
+plot.Fe+xlim(1985, 2020)+ylim(0.15, 0.5)
+```
+
+Naredimo simulacije za rast sokrvja pri opaženi Ne.
+Htot = heterozigotnost slovaških risov = 0.594
+
+```{r Risi_FNeSim3}
+FeSim = HFDataSimMulti(Ne=22, R=40,StartYear = 1990, EndYear = 2008, G=3, Hs = 0.495, Htot = 0.594, Nsim=200)
+
+plot.Fe + 
+  geom_line(aes(x=year, y=plInbr, group=iter), data=FeSim, color="red", alpha = 0.1)
+```
+
+###NALOGA K
+Koliko je efektivna velikost populacije v zadnjem desetletju? Poskusite narediti predikcijo padca heterozigotnosti od leta 2002 dalje (lahko narišete na isti graf z zeleno barvo).
+```{r Naloga_K}
+
+```
+
+
+(no, tu je pa plonk :))
+```{r Naloga_K_plonk}
+HePadecSim = HFDataSimMulti(Ne=22, R=40,StartYear = 1990, EndYear = 2005, G=3, Hs = 0.495, Htot = 0.594, Nsim=50)
+HoPadecSim2 = HFDataSimMulti(Ne=11, R=40,StartYear = 2002, EndYear = 2011, G=3, Hs = 0.455, Htot = 0.594, Nsim=50)
+
+HeHoPlot + geom_line(aes(x=year, y=plHet,group=iter), data=HePadecSim, color="green", alpha = 0.2)+
+           geom_line(aes(x=year, y=plHet,group=iter), data=HoPadecSim2, color="red", alpha = 0.2)
+
+```
+
+Kaj se pa dogaja z inbreedingom? Naredimo isto z rastjo sokrvja
+
+```{r Risi_FNeSim4}
+FeSim = HFDataSimMulti(Ne=22, R=40,StartYear = 1990, EndYear = 2008, G=3, Hs = 0.495, Htot = 0.594, Nsim=50)
+FeSim2 = HFDataSimMulti(Ne=11, R=40,StartYear = 2002, EndYear = 2011, G=3, Hs = 0.455, Htot = 0.594, Nsim=50)
+
+plot.Fe + geom_line(aes(x=year, y=plInbr, group=iter), data=FeSim, color="green", alpha = 0.2)+
+          geom_line(aes(x=year, y=plInbr, group=iter), data=FeSim2, color="red", alpha = 0.2)+ylim(0.1,0.45)
+```
+
+
+###AD-HOC ANALIZA VIABILNOSTI POPULACIJE (SAMO GENETSKA KOMPONENTA)
+
+Gremo pogledati, kako bi lahko pričakovali rast sokrvja v prihodnosti pri povprečnem, optimističnem in pesimističnem scenariju Ne (glede na interval zaupanja) - Ne = 11, Ne = 17, Ne = 7. 
+
+Najprej poglejmo heterozigotnost v zadnjih časovnih oknih
+```{r He_Konec}
+tc30.summ[52:56,]
+```
+
+Heterozigotnost na koncu je okrog 0.426, povprečno leto okrog 2005. Vzamemo to kot Hs (začetno heterozigotnost) in StartYear (prvo leto simulacije). Kot referenčno heterozigotnost še vedno jemljemo rise iz Slovaške.
+
+```{r Risi_PredikcijeF, warning=FALSE}
+FeSim = HFDataSimMulti(Ne=11, R=1000,StartYear = 2005, EndYear = 2035, G=3, Hs = 0.426, Htot = 0.594, Nsim=50)
+FeSimOpti = HFDataSimMulti(Ne=17, R=1000,StartYear = 2005, EndYear = 2035, G=3, Hs = 0.426, Htot = 0.594, Nsim=50)
+FeSimPesi = HFDataSimMulti(Ne=7, R=1000,StartYear = 2005, EndYear = 2035, G=3, Hs = 0.426, Htot = 0.594, Nsim=50)
+
+plot.FePredikcije = plot.Fe + geom_line(aes(x=year, y=plInbr, group=iter), data=FeSim, color="blue", alpha = 0.1)+
+          geom_line(aes(x=year, y=plInbr, group=iter), data=FeSimOpti, color="green", alpha = 0.1)+
+          geom_line(aes(x=year, y=plInbr, group=iter), data=FeSimPesi, color="red", alpha = 0.1)+ylim(0.1,0.6)
+
+plot.FePredikcije
+```
+
+###Naloga L
+Če predpostavimo 25% padec fitnesa pri povečanju F za 0.1, pri katerem F lahko pričakujemo padec fitnesa na 0 (izumrtje populacije iz zgolj genetskih vzrokov). Kdaj bi prišli naši risi do te točke?
+
+```{r Risi_PredikcijiF2, warning=FALSE}
+plot.FePredikcije + geom_hline(yintercept=0.4, color="purple", linetype="longdash")+xlim(1990, 2030)
+```
+
+Razmislek: koliko časa menite, da bi dinarski risi še imeli, če ne bi izvedli okrepitve populacije?
+
+

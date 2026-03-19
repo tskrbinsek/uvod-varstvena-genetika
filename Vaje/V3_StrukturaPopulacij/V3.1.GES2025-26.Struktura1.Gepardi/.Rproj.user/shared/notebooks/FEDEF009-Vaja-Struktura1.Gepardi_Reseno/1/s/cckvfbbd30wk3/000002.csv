@@ -1,0 +1,14 @@
+"1","
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuY2hlZXRhaC5zbXJ5PXN1bW1hcnkoY2hlZXRhaCkjUG92emV0ZWsgY2Vsb3RuaWggcG9kYXRrb3YuXG5jaGVldGFoLnNtcnlcbmBgYCJ9 -->
+
+```r
+cheetah.smry=summary(cheetah)#Povzetek celotnih podatkov.
+cheetah.smry
+```
+
+<!-- rnb-source-end -->
+"
+"0","```r
+cheetah.smry=summary(cheetah)#Povzetek celotnih podatkov.
+cheetah.smry
+```"

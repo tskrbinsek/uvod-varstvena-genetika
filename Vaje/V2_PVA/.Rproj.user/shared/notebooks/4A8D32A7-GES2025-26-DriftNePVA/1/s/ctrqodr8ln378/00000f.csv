@@ -1,0 +1,8 @@
+"0",""
+"0","ggplot(data=timechange.30[[1]], aes(x=meanyear, y=1-(Hobs/Hexp)))+"
+"0","  geom_line()+ geom_point(shape=5,size=1.5) + "
+"0","  ylab(""polno:Ho   črtkano:He"") + "
+"0","  xlab(""povprečje letnice smrti osebka v podvzorcu"") + "
+"0","  ggtitle(""Fis\npodvzorci po 30 osebkov potujoče okno (v času)"") +"
+"0","  theme(legend.position = ""none"") "
+"0",""

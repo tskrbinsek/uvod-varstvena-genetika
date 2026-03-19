@@ -1,0 +1,1 @@
+"0","hist(risi2.gen@other$Year, breaks=30, xlab = ""leto"", main=""Vzorci risov, po letu smrti"")"

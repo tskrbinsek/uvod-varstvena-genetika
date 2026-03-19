@@ -1,0 +1,80 @@
+Output from NeEstimator v.2
+Starting time: Mon Dec 12 08:44:07 2016
+Input File: "LynxLynxLDNeData.gen"
+
+Number of Loci = 19
+
+LD mating model: Random
+
+Population     1 [R01]  (Number of Individuals = 29)
+****************
+--------------------------------------------------------------------------
+Lowest Allele Frequency Used     0.050       0.020       0.010         0+
+--------------------------------------------------------------------------
+
+LINKAGE DISEQUILIBRIUM METHOD
+
+Harmonic Mean Sample Size =       27.8        27.8        27.8        27.8
+Independent Comparisons =        509         511         511         511
+OverAll r^2 =                  0.05293     0.05282     0.05238     0.05238
+Expected r^2 Sample =          0.03981     0.03984     0.03983     0.03983
+Estimated Ne^ =                   21.7        21.9        22.7        22.7
+
+95% CIs for Ne^
+* Parametric                      13.3        13.4        13.8        13.8
+                                  41.2        41.9        44.4        44.4
+
+* JackKnife on Loci               11.9        12.2        13.0        13.0
+                                  50.2        50.1        49.7        49.7
+
+**************************************************************************
+
+Population     2 [LS11]  (Number of Individuals = 27)
+****************
+--------------------------------------------------------------------------
+Lowest Allele Frequency Used     0.050       0.020       0.010         0+
+--------------------------------------------------------------------------
+
+LINKAGE DISEQUILIBRIUM METHOD
+
+Harmonic Mean Sample Size =       25.4        25.3        25.4        25.4
+Independent Comparisons =        566         617         668         668
+OverAll r^2 =                  0.05648     0.05424     0.05252     0.05252
+Expected r^2 Sample =          0.04420     0.04434     0.04413     0.04413
+Estimated Ne^ =                   23.3        29.3        34.9        34.9
+
+95% CIs for Ne^
+* Parametric                      13.9        16.8        19.4        19.4
+                                  47.6        69.6        95.0        95.0
+
+* JackKnife on Loci               11.7        15.3        18.1        18.1
+                                  71.5        90.6       120.8       120.8
+
+**************************************************************************
+
+Population     3 [086Y]  (Number of Individuals = 28)
+****************
+--------------------------------------------------------------------------
+Lowest Allele Frequency Used     0.050       0.020       0.010         0+
+--------------------------------------------------------------------------
+
+LINKAGE DISEQUILIBRIUM METHOD
+
+Harmonic Mean Sample Size =       27.9        27.9        27.9        27.9
+Independent Comparisons =        419         480         480         480
+OverAll r^2 =                  0.06326     0.06384     0.06202     0.06202
+Expected r^2 Sample =          0.03996     0.03996     0.03996     0.03996
+Estimated Ne^ =                   11.2        10.9        12.0        12.0
+
+95% CIs for Ne^
+* Parametric                       7.2         7.2         7.9         7.9
+                                  18.0        16.8        18.8        18.8
+
+* JackKnife on Loci                7.0         7.1         7.8         7.8
+                                  18.4        17.1        18.9        18.9
+
+**************************************************************************
+
+Ending time: Mon Dec 12 08:44:07 2016
+-------------------------------------
+

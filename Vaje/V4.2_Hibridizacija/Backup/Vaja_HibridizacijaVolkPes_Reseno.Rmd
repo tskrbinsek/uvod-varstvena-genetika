@@ -1,0 +1,214 @@
+---
+title: "GES 2025-2026, Vaja4.2: Hibridizacija volk - pes v Dinaridih"
+author: "Tomaz Skrbinsek"
+date: "November 2025"
+output: html_notebook
+editor_options: 
+  chunk_output_type: inline
+---
+
+##Opis vaje
+V vaji bomo raziskali hibridizacijo med domačimi psi in volkovi. Križanje ali hibridizacije je resen varstveni problem, saj lahko "udomačeni geni" preplavijo divjo populacijo.
+
+Podatki so od volkov in psov iz Dinaridov v Sloveniji in na Hrvaškem.
+
+Najprej naložimo podatke.
+
+```{r GetData}
+RawData = read.table("../WolfGenotypesSloHr_Dec2014.txt",sep="\t",header=T, stringsAsFactors = T)
+library(adegenet)
+```
+
+Naredimo 'genind' objekt. Ker v njem niso samo volkovi, ga bomo imenovli 'canids' (kanidi). 
+```{r MakeGenind}
+canids=df2genind(RawData[,21:54],sep=" ",ind.names=RawData$AnimalID)
+canids@other=RawData[,c(1:2,5:20)]
+pop(canids)=RawData$Pop
+```
+
+Kot običajno najprej raziščite podatke z 'accessorji'. Število osebkov, število lokusov, imena lokusov... nInd, nLoc, locNames. Naredite tudi povzetek objekta s klasično R funkcijo.
+
+```{r FirstExploration}
+nInd(canids) #Št. osebkov
+nLoc(canids) #Št. lokusov
+locNames(canids) #Imena lokusov
+summary(canids)
+```
+
+##Preprosta PCA
+
+Problem hibridizacije je pravzaprav problem genetske strukture. Lahko si hibridizacijo med dvema vrstama predstavljamo kot mešanje dveh dolgo ločenih populacij.
+
+Gremo najprej narediti preprosto PCA, da vidimo, ali opazimo kakšne vzorce.
+
+PCA ne mara manjkajočih podatkov... gremo to najprej.
+
+```{r PCA_MissingData}
+#Imamo kaj manjkajočih podatkov?
+sum(is.na(canids$tab))
+
+#Ni tako slabo, ampak preveč. Postavimo manjkajoče podatke na povprečje, da ne bodo vplivali na PCA in da zaradi posameznega manjkajočega markerja ne izgubimo celih osebkov.
+X=scaleGen(canids,NA.method="mean")
+```
+
+Gremo narediti PCA in poglejmo lastne vrednosti (eigenvalues).
+
+```{r PCA_PCA1}
+pca1 <- dudi.pca(X,cent=FALSE,scale=FALSE, scannf=FALSE, nf=2) 
+par(mfrow=c(1,1)) #scree plot
+barplot(pca1$eig[1:50],main="Eigenvalues", col=heat.colors(50))
+```
+
+Prva komponenta je močno informativna, morda tudi druga. Narišimo.
+
+```{r PCA_Plot1}
+par(mfrow=c(1,2)) #To samo pomeni, da bomo narisali dva grafa enega ob drugem
+s.label(pca1$li) #imena vzorcev
+s.class(pca1$li[,2:1], pop(canids),clabel=0.7) #po populacijah
+par(mfrow=c(1,1))
+```
+
+Ok, očitno nam nekaj vzorcev nagaja. Živalskega vrta in šakalov resnično ne potrebujemo.
+
+```{r PCA_RemoveNonTarget}
+wolfdog=canids[pop(canids) %in% c("Dinaric","Dogs")]
+wolfdog@other$Region=droplevels(wolfdog@other$Region)
+wolfdog@other = as.data.frame(wolfdog@other)
+```
+
+Zdaj pa PCA brez šakalov in živalskega vrta.
+
+```{r PCA_PCA2, warning=F}
+X=scaleGen(wolfdog,NA.method="mean")
+pca1 <- dudi.pca(X,cent=FALSE,scale=FALSE, scannf=FALSE, nf=2) 
+barplot(pca1$eig[1:50],main="Eigenvalues", col=heat.colors(50))
+```
+
+Mnogo bolj jasno. Narišimo.
+
+```{r PCA_Plot2}
+s.label(pca1$li)
+s.class(pca1$li, pop(wolfdog),clabel=0.7,col=1:2) #po populaciji
+s.class(pca1$li, other(wolfdog)$Region,clabel=0.7,col=1:15) #po regiji
+```
+
+Vidimo, da so volkovi in psi jasno ločeni, ampak da imamo "hribček" pri Dalmaciji, ki gleda proti psom. To pridemo do meje tega, kar lahko naredimo s PCA. Za nadaljevanje potrebujemo močnejše orodje.
+
+
+#Analiza v programu STRUCTURE
+
+STRUCTURE je že malo v letih, je pa 'zlati standard' pri analizi genetske strukture. Uporablja Bayesovsko gručanje genetskih podatkov in je koristen za zaznavanje populacijskih struktur, lahko ga pa uporabljamo tudi za zaznavanje hibridizacije in genetskega pretoka.
+
+Spletna stran:
+```
+browseURL("http://pritchardlab.stanford.edu/structure.html")
+```
+
+##Spravimo podatke v STRUCTURE
+
+Najprej potrebujemo nekaj doma pečenih funkcij, da spravimo podatke iz R-a v Structure. Format, ki ga uporablja STRUCTURE je preprost, z nekaj muke bi to lahko naredili tudi v Excelu (pa nimamo časa).
+
+```{r LoadCustomFunctions}
+source("..\\Functions_WolfHybridizationStructure.R")
+```
+
+Zdaj pa izvozimo podatke za STRUCTURE analizo. 
+
+```{r ExportForStructure}
+strLegendWolfDog=writeStructure(wolfdog,wolfdog@other$Region,".\\WolfDogStructure.txt")
+```
+
+Zdaj pa minimalizirajmo R... nadaljujemo v STRUCTURE, pridemo nazaj z rezultati.
+
+
+##Analizirajmo STRUCTURE rezultate.
+
+Prebrali bomo prečiščene Structure rezultate za K=2 (volk / pes) nazaj v R. Naredili smo 10 iteracij v MCMC in sestavili rezultate z CLUMPP permutacijskim algoritmom (preko CLUMPAK orodja na Internetu). CLUMPAK rezultati so prečiščeni in stolpce s q-vrednostmi (verjetnost pripadanja gruči (cluster-u)) smo imenovali pWolf in pDog (verjetnosti, ki se seštejeta v 1).
+
+```{r ReadWolfDogStructure}
+strWolves=read.table("..\\strResultsWolfDog.txt",sep="\t",header=T)
+```
+
+Narišimo, kako so razporejeni volkovi in psi. Najprej bomo vključili stolpec pWolf v 'genind' objekt z ostalimi podatki.
+
+```{r PlotWolfDog}
+library(ggplot2)
+
+#vključimo pWolf podatke v wolfdog 'genind' objekt.
+wolfdog@other=cbind(other(wolfdog),pWolf=strWolves$pWolf)
+
+#narišimo verjetnosti, da je osebek volk ali pes.
+qplot(y=pWolf,x=Pop,data=other(wolfdog),geom="boxplot")+theme_bw()+geom_point()+coord_flip()
+
+#narišimo po regijah
+qplot(Region, pWolf, data=other(wolfdog),geom="boxplot")+coord_flip()+geom_point()+theme_bw()
+```
+
+Vidimo, da je nekaj sumljivih osebkov, zlasti v Dalmaciji. Na žalost pa ne vemo, kje je meja, da lahko osebku rečemo 'križanec'.
+
+Lahko poženemo simulacijo križanja v programu 'Hybrid Lab', potem pa analiziramo genotipe simuliranih križancev v 'STRUCTURE' in pogledamo, kakšne q vrednosti lahko pričakujemo pri posamezni stopnji križanja. 
+
+Na hitro izlet v 'Hybrid Lab', potem pa nazaj v R. :)
+
+Uvozimo rezultate simulacij in jih malo organiziramo:
+
+```{r}
+strSimulation=read.table(".\\strResultsHybridLab.txt",sep="\t",header=T)
+strSimulation$Pop = as.factor(strSimulation$Pop) #spremenimo "Pop" (populacija) v vaktor
+levels(strSimulation$Pop) #ročno povemo kaj je katera kategorija
+levels(strSimulation$Pop)=c("Wolf","Dog","F1","F2","WolfBx","DogBx")
+head(strSimulation)
+```
+
+Zdaj pa vključimo dejanske podatke.
+
+```{r}
+DinaricMetadata = wolfdog@other[wolfdog@other$Pop == "Dinaric", ]
+hybridization_all = rbind(strSimulation[,1:2],data.frame(Pop=DinaricMetadata$Pop,pWolf=DinaricMetadata$pWolf))
+p=qplot(y=pWolf,x=Pop,data=hybridization_all,geom="boxplot")+theme_bw()+geom_point()+coord_flip()
+p
+```
+
+Kakšne so minimalne in 95% vrednosti pWolf, da je osebek še vedno 'čisti' volk?
+
+```{r}
+#minimum za 'čiste' volkove.
+min(hybridization_all[hybridization_all$Pop == "Wolf","pWolf"])
+
+#95% za 'čiste' volkove.
+quantile(hybridization_all[hybridization_all$Pop == "Wolf","pWolf"],0.05)
+
+```
+
+
+Narišimo na graf - min(pWolf) in 95%(pWolf).
+
+```{r}
+p=p+geom_hline(yintercept=0.91,colour="red",linetype="dashed")+geom_hline(yintercept=0.935,colour="blue",linetype="dashed")
+p
+```
+
+Dodajmo še maksimum vrednosti za 'čiste' pse...
+
+```{r}
+#nekaj statistik... ko osebek ni križanec
+summary(strSimulation$pWolf[strSimulation$Pop=="Dog"])
+
+#Bomo preprosti in bomo samo dodali maksimum.
+p=p+geom_hline(yintercept=0.225,colour="red",linetype="dashed")
+p
+```
+
+Zdaj vemo, kje lahko pričakujemo križance. Gremo pogledat dinarske vzorce... kje prihaja do križanja?
+
+```{r, warning=F}
+p=qplot(y=pWolf,x=Region,data=DinaricMetadata,geom="boxplot")+theme_bw()+geom_point()+coord_flip()
+p=p+geom_hline(yintercept=0.91,colour="red",linetype="dashed")+geom_hline(yintercept=0.9356,colour="blue",linetype="dashed")
+p
+p+ylim(0.5,1)
+```
+
+Torej... ali imamo problem s križanjem med volkom in psom? Kje?
+
+
+#KONEC VAJE

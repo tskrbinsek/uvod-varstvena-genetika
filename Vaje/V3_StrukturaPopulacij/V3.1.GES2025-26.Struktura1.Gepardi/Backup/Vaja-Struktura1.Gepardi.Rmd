@@ -1,0 +1,222 @@
+---
+title: "GENETSKA STRUKTURA POPULACIJE, VAJA 1.1"
+author: "Tomaž Skrbinšek"
+date: "18. oktober 2021"
+output: html_notebook
+---
+
+###Genetika v ekologiji in sistematiki
+###Oddelek za biologijo, BF, Univerza v Ljubljani
+###Študijsko leto 2021/2022
+
+
+##VAJA: STRUKTURA POPULACIJ GEPARDOV V AFRIKI IN AZIJI
+
+Podatki iz: Charruau, P. et al (2011) Phylogeography, genetic structure and population divergence time of cheetahs in Africa and Asia: evidence for long-term geographic isolates. Molecular Ecology, 20, 706-724.
+[Neposredna povezava do članka](http://dx.doi.org/10.1111/j.1365-294X.2010.04986.x)
+
+
+Iz lokalne datoteke (spodnjo vrstico lahko iz R Studia zaženete z ctrl-enter).
+
+```{r}
+shell.exec(".\\Charruau2011.MolEco.CheetahAfricaAsia.pdf")
+```
+
+**Članek**
+```{r}
+browseURL("http://dx.doi.org/10.1111/j.1365-294X.2010.04986.x")
+```
+**nekaj o vrsti**
+```{r}
+browseURL("http://en.wikipedia.org/wiki/Cheetah")
+```
+
+Naložimo podatke v R. Podatke boste dobili v datoteki "CheetahData.txt", uvozite jih v objekt "RawData". Funkcija je read.table, ne pozabite na narekovaje. Prva vrstica je "header" - imena stolpcev. Ločilo med stolpci (sep) je tabulator ("\t"). 
+
+Ko podatke uvozite, poglejte prvih nekaj vrstic.... kateri ukaz je že za to?
+
+```{r}
+RawData = read.table(".\\CheetahData.txt", sep="\t", header=T, stringsAsFactors = T) #prebere datoteko
+head(RawData) #pokaže prvih nekaj vrstic podatkov.
+```
+
+Zdaj imamo tabelo s podatki... ampak R-u se ne sanja, da gre za genetske podatke, še manj kako bi iz tega kar koli izračunal. :)
+
+Potrebujemo dodatno funkcionalnost.... paketi!
+
+Za genetiko obstaja na stotine paketov. En od bolj "popolnih" za populacijsko genetiko je "adegenet". Paket naložimo s funkcijo "library". Če paket ni dostopen v lokalni R instalaciji (npr. če delate to vajo doma), ga moramo instalirati z interneta s funkcijo "install.packages". Znak '#' pomeni komentar - ta del 'kode' se ne bo zagnal in na ta način lahko bodisi pišemo komentarje v kodo, bodisi izključimo posamezne dele kode, ki je ne potrebujemo, da se ne izvede.
+x
+```{r LoadPackages, warning=F,message=F}
+
+#naloži knjižnico s funkcijami.
+##****TVOJA KODA TUKAJ****##
+
+```
+
+
+Adegenet ima za shranjevanje genetskih podatkov o osebkih posebno podatkovno strukturo, 'genind' objekt. Genetske podatke v različnih okusih lahko preprosto "prepakiramo" v genind in lahko z njimi delamo naprej.
+
+Najprej naredimo 'genind' objekt z genetskimi podatki gepardov. Podatke imamo trenutno v dataframe-u. Genind naredimo z ukazomo "dataframe to genind", zapiše pa se "df2genind":
+
+```{r}
+cheetah=df2genind(RawData[,7:24],sep=" ",ind.names=RawData$ID,NA.char="-1",ploidy=2)
+```
+
+Gremo malo secirat ta ukaz... Poglejte "RawData" in kaj smo dejansko naredili. Poglejte tudi "help" za funkcijo df2genind.
+
+'genind' ima predalček "other", v katerega lahko pospravimo dodatne podatke o vsakem osebku. Do njega lahko pridete z @ (ime_genind_objekta@other) ali z "accessor" funkcijo 'other' other(ime_genind_objekta). Razmislite, katere podatke iz RawData bi bilo smiselno tja pospraviti in to naredite.
+
+```{r}
+#TVOJA KODA TUKAJ
+```
+
+Prva stvar, vedno... RAZIŠČIMO PODATKE!
+
+Do posameznih delov podatkov enostavno pridemo z "accessorji", funkcijami, ki nam vrnejo posamezne dele podatkovnih objektov ali posamezne lastnosti:
+
+nInd, nLoc, nAll, locNames, alleles, other, pop
+
+Preizkusite, poglejte 'help'... razmislite kako delujejo.
+
+```{r}
+#TVOJA KODA TUKAJ
+```
+
+Pravijo, da je slika vredna 1000 besed (in graf 1000 podatkovnih zapisov). Gremo grafat.
+
+```{r}
+par(mar=c(9,4,4,2)+0.1) #tole samoi nastavi "margine", da izpiše cela imena
+barplot(table(cheetah@other$Origin), col=funky(20), ylab="Število vzorcev", las=3) #število vzorcev po državi/regiji
+```
+
+Ok, to je bilo po državi, zdaj pa dajte sami po širši regiji (Area) in mestu nabire vzorca (Collection_Place).
+
+```{r}
+#število vzorcev po območju
+#TVOJA KODA TUKAJ
+```
+
+
+Podobno kot za druge objekte v R-u, lahko preprosto dobimo povzetek celotnih podatkov. Se spomnite ukaza za to? Rezultat spravite v nov objekt `cheetah.smry`.
+
+```{r}
+#TVOJA KODA TUKAJ
+```
+
+
+Heterozigotnost... različnih okusov. Poglej strukturo objekta `cheetah.srmy`. Naredi data frame, kjer bo v enem stolpcu opažena, v enem pričakovana heterozigotnost. Izpiši na ekran (ne rabiš pospravljati v objekt).
+```{r}
+
+```
+
+
+Ali vidite kaj zanimivega?
+
+Dajmo narisati! :)
+
+```{r}
+
+par(mfrow=c(2,2))#definiramo 2×2 okno za grafe (da lahko vidimo enega ob drugem)
+
+#Število alelov po lokusu
+barplot(nAll(cheetah), ylab="Št. alelov", main="Število alelov po lokusu", las=3)
+
+#Poglejmo razliko med opaženo in pričakovano heterozigotnostjo
+barplot(cheetah.smry$Hexp-cheetah.smry$Hobs, main="Heterozigotnost, pričakovana minus opažena", ylab="Hexp - Hobs", las=3)
+
+#Ho/He
+plot(cheetah.smry$Hobs, cheetah.smry$Hexp, xlab="Hobs",ylab="Hexp", main="Opažena/Pričakovana Heterozigotnost",xlim=c(0.4,0.9), ylim=c(0.4,1))
+abline(0,1,col="red")
+
+#nastavimo "plot" okno nazaj na en graf...
+par(mfrow=c(1,1))
+
+#... še na hitro t-test (Nulta hipoteza je Hexp = Hobs)
+t.test(cheetah.smry$Hexp, cheetah.smry$Hobs,paired=TRUE,var.equal=TRUE, cas=2)
+
+```
+
+Kaj nam kažejo ti rezultati? Ali so po vašem mnenju genotipi v Hardy - Weinbergovem ravnovesju?
+
+Bolj strikten test lahko naredimo s paketom "Pegas".
+
+```{r cheetahHW, warning=F, message=F}
+
+#install.packages("pegas")
+#instaliraj paket, če ga potrebuješ 
+#(umakni # pred vrstico zgoraj in zaženi)
+#več funkcij za testiranje HWE.
+library(pegas)
+
+#test HWE. Za več informacij vtipkaj '?hw.test' spodaj.
+HWE=hw.test(cheetah) 
+HWE
+
+#Gremo narediti tabelo (temu se v R-u reče 'data frame') z Ho/He,p(HWE)
+HW_cheetah=data.frame(Hexp=cheetah.smry$Hexp,Hobs=cheetah.smry$Hobs,p_HWE=HWE[,4])
+row.names(HW_cheetah)=dimnames(HWE)[[1]]
+HW_cheetah
+
+#Na katerih lokusih je p-vrednost HWE testa p<=0.05? Koliko lokusov?
+locNames(cheetah)[HWE[,4]<=0.05]
+sum(HWE[,4]<=0.05)
+```
+
+Smiselno bi bilo pogledati genetsko strukturo. Gremo uporabiti dobro staro PCA (analizo osnovnih komponent). Bomo naredili skupaj in 'secirali' ukaze.
+
+```{r PCAcheetah}
+#poglejmo koliko je manjkajočih podatkov
+sum(is.na(cheetah$tab))
+
+#PCA ne zna uporabljati manjkajočih podatkov. Dajmo jih na povprečje (to ne bi smelo vplivati na rezultat).
+X=scaleGen(cheetah,NA.method="mean")
+pca1 <- dudi.pca(X,cent=FALSE,scale=FALSE, scannf=FALSE, nf=2) #make PCA
+```
+
+
+Poglejmo lastne vrednosti (eigenvalues) in zrišimo rezultat.
+
+```{r}
+#plot lastne vrednosti
+barplot(pca1$eig[1:50],main="PCA Eigenvalues", col=heat.colors(50))
+```
+
+
+PCA nam podatke "agregira" v čim manj osi. Te imajo najvišje lastne vrednosti ("Eigenvalues") in izstopajo, če je v podatkih struktura. V tem primeru lahko dve osi interpretiramo.
+
+Poglejmo, ali se podatki združujejo po teh dveh oseh. Podatki so v pca1$li, narišemo jih z enostavno funkcijo 'plot'.
+
+```{r}
+plot(pca1$li)
+```
+
+Ali vidimo kakšno strukturo? Označimo države - funkcija 's.class'.
+
+```{r}
+s.class(pca1$li, fac=other(cheetah)$Origin)
+```
+
+
+Ali to sovpada z geografskimi regijami?
+
+```{r}
+s.class(pca1$li, other(cheetah)$Area)
+```
+
+Zdi se, da je vsaka geografska regija druga populacija - gremo to zapisati v naš objekt z genetskimi podatki.
+
+```{r}
+pop(cheetah)=other(cheetah)$Area
+```
+
+
+PCA lepo kaže genetsko strukturo.  
+Gremo izračunati "pairwise" Fst. Potrebujemo "hierarhične F-statistike", paket 'hierfstat'.
+
+```{r cheetahFST, warning=F, message=F}
+library(hierfstat)
+
+genet.dist(cheetah, method = "Nei87")
+```
+
+Pri gepardih imamo podatke na ravni kontinentov - velike razlike je enostavno zaznati tudi z razmeroma preprostimi metodami. Pri "finejših" razlikah med populacijami potrebujemo močnejša orodja... naslednja vaja. :)

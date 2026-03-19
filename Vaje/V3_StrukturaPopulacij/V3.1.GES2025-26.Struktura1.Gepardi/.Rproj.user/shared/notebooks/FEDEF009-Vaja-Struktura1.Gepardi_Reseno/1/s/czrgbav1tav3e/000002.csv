@@ -1,0 +1,20 @@
+"1","
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubkluZChjaGVldGFoKSAjxaB0ZXZpbG8gb3NlYmtvdlxubkxvYyhjaGVldGFoKSAjxaB0ZXZpbG8gbG9rdXNvdlxubkFsbChjaGVldGFoKVxubG9jTmFtZXMoY2hlZXRhaCkgI0ltZW5hIGxva3Vzb3ZcbmFsbGVsZXMoY2hlZXRhaCkgI0FsZWxpIHBvIGxva3VzdVxuYGBgIn0= -->
+
+```r
+nInd(cheetah) #Število osebkov
+nLoc(cheetah) #Število lokusov
+nAll(cheetah)
+locNames(cheetah) #Imena lokusov
+alleles(cheetah) #Aleli po lokusu
+```
+
+<!-- rnb-source-end -->
+"
+"0","```r
+nInd(cheetah) #Število osebkov
+nLoc(cheetah) #Število lokusov
+nAll(cheetah)
+locNames(cheetah) #Imena lokusov
+alleles(cheetah) #Aleli po lokusu
+```"

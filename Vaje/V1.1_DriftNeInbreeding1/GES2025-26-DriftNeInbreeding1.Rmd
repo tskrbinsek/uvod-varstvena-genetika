@@ -1,0 +1,128 @@
+---
+title: 'VAJA: SOKRVJE, GENETSKI ZDRS (INBREEDING, DRIFT), 1. del'
+author: "Tomaž Skrbinšek, GES 2025-2026"
+date: "20. oktober 2025"
+output: html_notebook
+---
+
+## VAJA1: Simulacije genetskega zdrsa, padca heterozigotnosti in nabiranja sokrvja
+
+Cilj vaje je skozi simulacije in na empiričnih primerih spoznati učinke sokrvja (inbreeding) in genetskega zdrsa.
+
+Ta prvi "chunk" je za tiste, ki boste to poganjali doma. Samo umaknite tiste "lojtra" (#) znake in zaženite chunk, pa bo R poinstaliral knjižnice, ki jih potrebujete.
+
+```{r InstalacijaPaketov}
+#install.packages("ggplot2")
+#install.packages("adegenet")
+#install.packages("gridExtra")
+#install.packages("pegas")
+```
+
+
+Samodejno se bodo naložili potrebni paketi in nekatere doma pečene funkcije (iz datoteke VajeInbreedingDrift_Funkcije.R)
+```{r setup}
+knitr::opts_chunk$set(
+  echo = TRUE,
+  message = FALSE,  # Disable messages
+  warning = FALSE  # Disable warnings
+  )
+
+library(ggplot2)
+library(adegenet)
+library(gridExtra)
+library(pegas)
+source(".\\VajeInbreedingDrift_Funkcije.R", echo=F, encoding = "UTF-8")
+```
+
+
+Vzeli bomo bialelski selekcijsko nevtralen lokus z začetno frekvenco p=0.5 in simulirali genetski zdrs.
+_t = število generacij, R = število simuliranih lokusov, Ne = efektivna velikost populacije_
+
+Poglejmo prvi graf - 50 generacij, 20 lokusov, efektivna velikost populacije = 2000
+
+```{r Drift1}
+DriftGraf(t=50,R=20,Ne=2000)
+```
+
+
+### NALOGA A
+
+Naredi simulacijo za Ne = 200. Še eno za Ne=20. Kaj se dogaja z alelnimi frekvencami, ko nižamo Ne? Kaj s fiksacijo alelov? Kaj to pomeni za hitrost genetskega zdrsa?
+
+Lahko spreminjate število generacij in število lokusov.
+
+NAMIG: POGLEJTE FUNKCIJO DriftGraf zgoraj.
+Še en namig: R je "case-sensitive", pomeni da velike in male črke niso enake.
+
+```{r A}
+#TUKAJ VPIŠITE SVOJO KODO.
+
+
+
+
+
+```
+
+
+Simulirajmo še *padec heterozigotnosti in rast sokrvja*.
+_t = število generacij, R = število simuliranih lokusov (tu vpliva na varianco!), Ne = efektivna velikost populacije_
+
+Primer: 50 generacij, 1000 lokusov, efektivna velikost populacije = 20.
+
+```{r HeterozigotnostInbreeding}
+HFGraf(t=50,R=1000,Ne=20)
+```
+
+### NALOGA B
+Pri koliko generacijah doseže inbreeding 0.2? _(namig: za lepšo sliko zmanjšaj število generacij, t)_
+
+```{r B}
+#TUKAJ VPIŠITE SVOJO KODO.
+
+
+
+
+
+```
+
+### NALOGA C
+Katere so "čezpalčne" vrednosti za Ne za *viabilno populacijo*? 
+Naredi simulacije za te vrednosti.
+
+```{r C}
+#TUKAJ VPIŠITE SVOJO KODO.
+
+
+
+
+
+```
+
+
+### NALOGA D
+Poskušaj različne vrednosti. Kaj se dogaja z *genetsko pestrostjo*, ko pada Ne?
+Kaj se dogaja s *faktorjem sokrvja*?
+
+```{r D}
+#TUKAJ VPIŠITE SVOJO KODO.
+
+
+
+
+
+```
+
+
+### NALOGA E
+Prej smo simulirali genom (1000 lokusov). Poglejmo našo *zaznano* sokrvje in genetsko pestrost, ko zmanjšujemo število lokusov proti realnim vrednostim. Poskusi t=50 generacij, Ne=30, R=50 lokusov. Poskusi isto z 20 lokusi.
+
+```{r E}
+#TUKAJ VPIŠITE SVOJO KODO.
+
+
+
+
+
+```
+
+

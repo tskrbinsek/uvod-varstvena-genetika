@@ -1,0 +1,5 @@
+"0","tc30.summ=timechange.30[[1]]"
+"0","HeDrop=NULL"
+"0","for (i in seq(1989,2005,4)) HeDrop=c(HeDrop,mean(tc30.summ$Hexp[round(tc30.summ$meanyear,0)==i]))"
+"0","HeDrop=data.frame(year=seq(1989,2005,4), He=HeDrop)"
+"0","HeDrop"

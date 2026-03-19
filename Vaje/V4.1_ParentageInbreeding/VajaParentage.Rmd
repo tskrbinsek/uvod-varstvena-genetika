@@ -1,0 +1,58 @@
+---
+title: 'GES 2025 - 2026, Vaja 4.1: Analiza sorodnosti in neposredno parjenje v sorodstvu'
+date: "10. 11. 2025"
+output: html_notebook
+---
+
+Cilj vaje je pogledati učinke sokrvja (inbreeding) in genetskega zdrsa.
+
+Ta prvi "chunk" je za tiste, ki boste to poganjali doma. Samo umaknite tiste "lojtra" (#) znake in zaženite chunk, pa bo R poinstaliral knjižnice, ki jih potrebujete.
+
+```{r InstalacijaPaketov}
+#install.packages("SOLOMON") ne bo delalo, ker so paket nehali vzdrževati.
+#Lahko ga ročno instalirate iz arhiva
+#https://cran.r-project.org/web/packages/SOLOMON/index.html
+
+
+# install.packages("APIS")
+library(APIS)
+```
+
+```{r}
+potomci = read.delim("MedvediUjetnistvo_Potomci2.txt")
+row.names(potomci) = potomci$ID
+potomci = potomci[,-1]
+potomci = as.matrix(potomci)
+
+matere = read.delim("MedvediUjetnistvo_PMatere.txt")
+row.names(matere) = matere$ID
+matere = matere[,-1]
+matere= as.matrix(matere)
+
+ocetje = read.delim("MedvediUjetnistvo_POcetje.txt")
+row.names(ocetje) = ocetje$ID
+ocetje = ocetje[,-1]
+ocetje= as.matrix(ocetje)
+```
+
+```{r}
+# Izračunamo rodovnike
+
+result_excl <- APIS_2n(potomci, ocetje, matere, method = "exclusion")
+```
+
+##VAJA: Sorodnost in parjenje v sorodstvu pri medvedih v ujetništvu v Sloveniji
+```{r}
+rodovnik = result_excl$log_file
+rodovnik
+
+```
+
+
+Gremo izrisat rodovnik! Kdo so starši medvedkov na Muti? 
+
+Kaj pa medved na Nanosu?
+
+Naloga: Izračunaj faktor sokrvja (inbreeding) medvedkov na Muti.
+
+-------------------------------------

@@ -1,0 +1,48 @@
+"1","
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuXG5wYXIobWZyb3c9YygyLDIpKSNkZWZpbmlyYW1vIDLDlzIgb2tubyB6YSBncmFmZSAoZGEgbGFoa28gdmlkaW1vIGVuZWdhIG9iIGRydWdlbSlcblxuI8WgdGV2aWxvIGFsZWxvdiBwbyBsb2t1c3VcbmJhcnBsb3QobkFsbChjaGVldGFoKSwgeWxhYj1cIsWgdC4gYWxlbG92XCIsIG1haW49XCLFoHRldmlsbyBhbGVsb3YgcG8gbG9rdXN1XCIsIGxhcz0zKVxuXG4jUG9nbGVqbW8gcmF6bGlrbyBtZWQgb3Bhxb5lbm8gaW4gcHJpxI1ha292YW5vIGhldGVyb3ppZ290bm9zdGpvXG5iYXJwbG90KGNoZWV0YWguc21yeSRIZXhwLWNoZWV0YWguc21yeSRIb2JzLCBtYWluPVwiSGV0ZXJvemlnb3Rub3N0LCBwcmnEjWFrb3ZhbmEgbWludXMgb3Bhxb5lbmFcIiwgeWxhYj1cIkhleHAgLSBIb2JzXCIsIGxhcz0zKVxuXG4jSG8vSGVcbnBsb3QoY2hlZXRhaC5zbXJ5JEhvYnMsIGNoZWV0YWguc21yeSRIZXhwLCB4bGFiPVwiSG9ic1wiLHlsYWI9XCJIZXhwXCIsIG1haW49XCJPcGHFvmVuYS9QcmnEjWFrb3ZhbmEgSGV0ZXJvemlnb3Rub3N0XCIseGxpbT1jKDAuNCwwLjkpLCB5bGltPWMoMC40LDEpKVxuYWJsaW5lKDAsMSxjb2w9XCJyZWRcIilcblxuI25hc3RhdmltbyBcInBsb3RcIiBva25vIG5hemFqIG5hIGVuIGdyYWYuLi5cbnBhcihtZnJvdz1jKDEsMSkpXG5cbiMuLi4gxaFlIG5hIGhpdHJvIHQtdGVzdCAoTnVsdGEgaGlwb3RlemEgamUgSGV4cCA9IEhvYnMpXG50LnRlc3QoY2hlZXRhaC5zbXJ5JEhleHAsIGNoZWV0YWguc21yeSRIb2JzLHBhaXJlZD1UUlVFLHZhci5lcXVhbD1UUlVFLCBjYXM9MilcblxuYGBgIn0= -->
+
+```r
+
+par(mfrow=c(2,2))#definiramo 2×2 okno za grafe (da lahko vidimo enega ob drugem)
+
+#Število alelov po lokusu
+barplot(nAll(cheetah), ylab=\"Št. alelov\", main=\"Število alelov po lokusu\", las=3)
+
+#Poglejmo razliko med opaženo in pričakovano heterozigotnostjo
+barplot(cheetah.smry$Hexp-cheetah.smry$Hobs, main=\"Heterozigotnost, pričakovana minus opažena\", ylab=\"Hexp - Hobs\", las=3)
+
+#Ho/He
+plot(cheetah.smry$Hobs, cheetah.smry$Hexp, xlab=\"Hobs\",ylab=\"Hexp\", main=\"Opažena/Pričakovana Heterozigotnost\",xlim=c(0.4,0.9), ylim=c(0.4,1))
+abline(0,1,col=\"red\")
+
+#nastavimo \"plot\" okno nazaj na en graf...
+par(mfrow=c(1,1))
+
+#... še na hitro t-test (Nulta hipoteza je Hexp = Hobs)
+t.test(cheetah.smry$Hexp, cheetah.smry$Hobs,paired=TRUE,var.equal=TRUE, cas=2)
+
+```
+
+<!-- rnb-source-end -->
+"
+"0","```r
+
+par(mfrow=c(2,2))#definiramo 2×2 okno za grafe (da lahko vidimo enega ob drugem)
+
+#Število alelov po lokusu
+barplot(nAll(cheetah), ylab=\"Št. alelov\", main=\"Število alelov po lokusu\", las=3)
+
+#Poglejmo razliko med opaženo in pričakovano heterozigotnostjo
+barplot(cheetah.smry$Hexp-cheetah.smry$Hobs, main=\"Heterozigotnost, pričakovana minus opažena\", ylab=\"Hexp - Hobs\", las=3)
+
+#Ho/He
+plot(cheetah.smry$Hobs, cheetah.smry$Hexp, xlab=\"Hobs\",ylab=\"Hexp\", main=\"Opažena/Pričakovana Heterozigotnost\",xlim=c(0.4,0.9), ylim=c(0.4,1))
+abline(0,1,col=\"red\")
+
+#nastavimo \"plot\" okno nazaj na en graf...
+par(mfrow=c(1,1))
+
+#... še na hitro t-test (Nulta hipoteza je Hexp = Hobs)
+t.test(cheetah.smry$Hexp, cheetah.smry$Hobs,paired=TRUE,var.equal=TRUE, cas=2)
+
+```"

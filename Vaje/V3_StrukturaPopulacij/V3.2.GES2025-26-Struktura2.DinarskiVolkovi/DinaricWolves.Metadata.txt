@@ -1,0 +1,323 @@
+"AnimalID" "Samp" "HyPop" "Pop" "St" "Region" "BirthPack" "Reproducti" "IsReproduc" "QI" "SType" "Dt" "NumAmpedLo" "amelogenin" "SRY" "GeneticSex" "MatchedOK" "Str_p_Wolf" "pWolf" "GIS_X" "GIS_Y"
+"729" "AU.0C8P" "Dinaric" "Dinaric" "Noninvasive - SLO" "Slovenia" NA NA FALSE 0.9 "Scat" "23.12.2007" 40 "2 2" NA "F" 0 0.998 0.998 457777 44318
+"743" "AY.0F2J" "Neznano" "Dinaric" "Austria" "Austria" NA NA FALSE 0.97973 "Scat" "1.06.2013" 37 "1 2" "1 1" "M" 0 NA 0.9964 500597 193361
+"549" "AP.07Y2" "Dinaric" "Dinaric" "Mortality-HR" "Bosnia" NA NA FALSE 1 "Tissue" "6.03.2004" 37 "1 2" "1 1" "M" 0 0.9631 0.9652 675208 -131311
+"537" "AP.07X0" "Dinaric" "Dinaric" "Mortality-HR" "Bosnia" NA NA FALSE 0.959459 "Tissue" "6.02.2004" 37 "1 2" "1 1" "M" 0 0.9704 0.9772 675208 -131311
+"547" "AP.07XY" "Dinaric" "Dinaric" "Mortality-HR" "Bosnia" NA NA FALSE 1 "Tissue" "6.03.2004" 37 "1 2" "1 1" "M" 0 0.9758 0.9812 675208 -131311
+"509" "AP.07PX" "Dinaric" "Dinaric" "Mortality-HR" "Bosnia" NA NA FALSE 1 "Tissue" "6.02.2004" 37 "1 2" "1 1" "M" 0 0.9789 0.9944 675208 -131311
+"580" "AP.0825" "Dinaric" "Dinaric" "Mortality-HR" "Bosnia" NA NA FALSE 1 "Tissue" "10.11.1997" 37 "1 2" "1 1" "M" 0 0.9941 0.9906 646261 -144670
+"494" "AP.07MC" "Dinaric" "Dinaric" "Mortality" "Dalmatia (HR)" NA NA FALSE 0.939024 "Tissue" "19.11.2011" 41 "1 2" "1 1" "M" 0 0.9805 0.9452 591876 -169090
+"495" "AP.07ME" "Dinaric" "Dinaric" "Mortality" "Dalmatia (HR)" NA NA FALSE 0.918699 "Tissue" "28.11.2011" 41 "1 2" "1 1" "M" 0 0.9834 0.9786 606933 -118594
+"488" "AP.07M4" "Dinaric" "Dinaric" "Mortality" "Dalmatia (HR)" NA NA FALSE 0.910569 "Tissue" "13.11.2011" 41 "2 2" NA "F" 0 0.9875 0.9886 670696 -184999
+"492" "AP.07M8" "Dinaric" "Dinaric" "Mortality" "Dalmatia (HR)" NA NA FALSE 0.914634 "Tissue" "16.10.2011" 41 "2 2" NA "F" 0 0.997 0.997 615567 -131243
+"489" "AP.07M5" "Dinaric" "Dinaric" "Mortality" "Dalmatia (HR)" NA NA FALSE 1 "Tissue" "13.03.2006" 37 "2 2" NA "F" 0 0.9739 0.9774 715088 -231663
+"689" "AP.08AA" "Dinaric" "Dinaric" "Mortality-HR" "Dalmatia (HR)" NA NA FALSE 0.373016 "Decomposing Tissue" "15.05.2011" 42 "1 2" "1 1" "M" 0 0.9682 0.9644 618775 -136401
+"514" "AP.07T6" "Dinaric" "Dinaric" "Mortality-HR" "Dalmatia (HR)" NA NA FALSE 0.668468 "Decomposing Tissue" "14.01.1996" 37 "2 2" "1 1" "F" 0 0.998 0.998 630736 -158673
+"676" "AP.088M" "Dinaric" "Dinaric" "Mortality-HR" "Dalmatia (HR)" NA NA FALSE 0.561508 "Decomposing Tissue" "11.03.2012" 42 "2 2" NA "F" 0 0.9911 0.996 632704 -164087
+"577" "AP.0821" "Dinaric" "Dinaric" "Mortality-HR" "Dalmatia (HR)" NA NA FALSE 0.717117 "Decomposing Tissue" "21.02.2003" 37 "1 2" "1 1" "M" 0 0.9934 0.994 633031 -163387
+"597" "AP.0845" "Dinaric" "Dinaric" "Mortality-HR" "Dalmatia (HR)" NA NA FALSE 0.748649 "Decomposing Tissue" "4.06.2009" 37 "2 2" NA "F" 0 0.9956 0.9938 642878 -166683
+"505" "AP.07PF" "Dinaric" "Dinaric" "Mortality-HR" "Dalmatia (HR)" NA NA FALSE 0.912162 "Tissue" "3.08.2005" 37 "2 2" "1 1" "F" 0 0.9498 0.9612 680846 -184698
+"584" "AP.0836" "Dinaric" "Dinaric" "Mortality-HR" "Dalmatia (HR)" NA NA FALSE 0.772358 "Decomposing Tissue" "15.09.2010" 41 "1 2" "1 1" "M" 0 0.9714 0.9634 594027 -150566
+"513" "AP.07T4" "Dinaric" "Dinaric" "Mortality-HR" "Dalmatia (HR)" NA NA FALSE 0.932432 "Tissue" "14.01.1996" 37 "1 2" "1 1" "M" 0 0.9976 0.998 630736 -158673
+"559" "AP.0802" "Dinaric" "Dinaric" "Mortality-HR" "Dalmatia (HR)" NA NA FALSE 1 "Tissue" "24.10.2006" 37 "2 2" NA "F" 0 0.9485 0.9514 655615 -178853
+"695" "AP.08AK" "Dinaric" "Dinaric" "Mortality-HR" "Dalmatia (HR)" NA NA FALSE 0.896825 "Tissue" "23.10.2011" 42 "2 2" NA "F" 0 0.9585 0.979 650613 -166388
+"554" "AP.07YL" "Dinaric" "Dinaric" "Mortality-HR" "Dalmatia (HR)" NA NA FALSE 0.959459 "Tissue" "26.12.2008" 37 "1 2" "1 1" "M" 0 0.9596 0.944 564073 -139591
+"753" "CH.0LLX" "Dinaric" "Dinaric" "Mortality-HR" "Dalmatia (HR)" NA NA FALSE 0.939024 "Tissue" "7.03.2013" 41 "1 2" "1 1" "M" 0 0.9634 0.971 666663 -177738
+"678" "AP.088T" "Dinaric" "Dinaric" "Mortality-HR" "Dalmatia (HR)" NA NA FALSE 0.896825 "Tissue" "4.12.2011" 42 "2 2" NA "F" 0 0.9696 0.99 675487 -190865
+"656" "AP.087P" "Dinaric" "Dinaric" "Mortality-HR" "Dalmatia (HR)" NA NA FALSE 0.892857 "Tissue" "5.11.2010" 42 "2 2" NA "F" 0 0.9713 0.951 598995 -173170
+"507" "AP.07PJ" "Dinaric" "Dinaric" "Mortality-HR" "Dalmatia (HR)" NA NA FALSE 0.873874 "Decomposing Tissue" "15.07.2003" 37 "1 2" "1 1" "M" 0 0.9747 0.9526 592541 -166178
+"552" "AP.07YA" "Dinaric" "Dinaric" "Mortality-HR" "Dalmatia (HR)" NA NA FALSE 0.972973 "Tissue" "21.09.2005" 37 "2 2" NA "F" 0 0.9793 0.9118 650613 -166388
+"699" "AP.08AT" "Dinaric" "Dinaric" "Mortality-HR" "Dalmatia (HR)" NA NA FALSE 0.892857 "Tissue" "26.12.2011" 42 "1 2" "1 1" "M" 0 0.9801 0.952 606933 -118594
+"655" "AP.087M" "Dinaric" "Dinaric" "Mortality-HR" "Dalmatia (HR)" NA NA FALSE 0.884921 "Tissue" "10.01.2011" 42 "2 2" NA "F" 0 0.9809 0.9534 613331 -130630
+"687" "AP.08A6" "Dinaric" "Dinaric" "Mortality-HR" "Dalmatia (HR)" NA NA FALSE 0.892857 "Tissue" "31.03.2011" 42 "2 2" NA "F" 0 0.9811 0.9722 624325 -173381
+"682" "AP.08A0" "Dinaric" "Dinaric" "Mortality-HR" "Dalmatia (HR)" NA NA FALSE 0.884921 "Tissue" "19.02.2010" 42 "1 2" "1 1" "M" 0 0.9838 0.9822 650145 -176325
+"568" "AP.081A" "Dinaric" "Dinaric" "Mortality-HR" "Dalmatia (HR)" NA NA FALSE 1 "Tissue" "29.11.2007" 37 "1 2" "1 1" "M" 0 0.9863 0.9752 581590 -124917
+"688" "AP.08A8" "Dinaric" "Dinaric" "Mortality-HR" "Dalmatia (HR)" NA NA FALSE 0.896825 "Tissue" "3.02.2012" 42 "1 2" "1 1" "M" 0 0.9885 0.988 596714 -127160
+"621" "AP.085L" "Dinaric" "Dinaric" "Mortality-HR" "Dalmatia (HR)" NA NA FALSE 1 "Tissue" "18.10.2007" 37 "2 2" NA "F" 0 0.9904 0.9906 596310 -163519
+"569" "AP.081C" "Dinaric" "Dinaric" "Mortality-HR" "Dalmatia (HR)" NA NA FALSE 1 "Tissue" "11.01.2008" 37 "1 2" "1 1" "M" 0 0.9907 0.9896 572852 -128522
+"501" "AP.07P8" "Dinaric" "Dinaric" "Mortality-HR" "Dalmatia (HR)" NA NA FALSE 1 "Tissue" "22.12.2004" 37 "2 2" NA "F" 0 0.9909 0.998 634792 -159051
+"563" "AP.0810" "Dinaric" "Dinaric" "Mortality-HR" "Dalmatia (HR)" NA NA FALSE 0.945946 "Tissue" "14.06.2005" 37 "2 2" NA "F" 0 0.9928 0.994 660936 -182164
+"690" "AP.08AC" "Dinaric" "Dinaric" "Mortality-HR" "Dalmatia (HR)" NA NA FALSE 0.912698 "Tissue" "20.11.2011" 42 "2 2" NA "F" 0 0.9929 0.9858 667167 -199061
+"626" "AP.085Y" "Dinaric" "Dinaric" "Mortality-HR" "Dalmatia (HR)" NA NA FALSE 0.939024 "Tissue" "28.10.2012" 41 "2 2" "1 1" "F" 0 0.994 0.995 571353 -140123
+"576" "AP.0820" "Dinaric" "Dinaric" "Mortality-HR" "Dalmatia (HR)" NA NA FALSE 0.959459 "Tissue" "4.11.2005" 37 "1 2" "1 1" "M" 0 0.9946 0.9912 599144 -148012
+"674" "AP.088K" "Dinaric" "Dinaric" "Mortality-HR" "Dalmatia (HR)" NA NA FALSE 0.892857 "Tissue" "5.11.2010" 42 "2 2" NA "F" 0 0.995 0.9962 583803 -118613
+"515" "AP.07T7" "Dinaric" "Dinaric" "Mortality-HR" "Dalmatia (HR)" NA NA FALSE 0.959459 "Tissue" "28.10.1996" 37 "1 2" "1 1" "M" 0 0.995 0.992 618775 -136401
+"758" "CH.0LM4" "Dinaric" "Dinaric" "Mortality-HR" "Dalmatia (HR)" NA NA FALSE 0.914634 "Tissue" "30.12.2012" 41 "2 2" NA "F" 0 0.9954 0.9954 651053 -178019
+"591" "AP.083Y" "Dinaric" "Dinaric" "Mortality-HR" "Dalmatia (HR)" NA NA FALSE 0.986486 "Tissue" "11.03.2007" 37 "2 2" NA "F" 0 0.996 0.9948 572852 -128522
+"526" "AP.07U6" "Dinaric" "Dinaric" "Mortality-HR" "Dalmatia (HR)" NA NA FALSE 0.986486 "Tissue" "7.12.2003" 37 "1 2" "1 1" "M" 0 0.996 0.9964 596714 -127160
+"587" "AP.083P" "Dinaric" "Dinaric" "Mortality-HR" "Dalmatia (HR)" NA NA FALSE 0.978378 "Tissue" "28.12.2008" 37 "1 2" "1 1" "M" 0 0.9961 0.9972 688582 -218050
+"562" "AP.080Y" "Dinaric" "Dinaric" "Mortality-HR" "Dalmatia (HR)" NA NA FALSE 0.936937 "Decomposing Tissue" "17.02.2005" 37 "2 2" NA "F" 0 0.997 0.997 584701 -129153
+"643" "AP.0872" "Dinaric" "Dinaric" "Mortality-HR" "Dalmatia (HR)" NA NA FALSE 0.892857 "Tissue" "26.12.2010" 42 "1 2" "1 1" "M" 0 0.997 0.9976 599241 -171068
+"756" "CH.0LM2" "Dinaric" "Dinaric" "Mortality-HR" "Dalmatia (HR)" NA NA FALSE 0.939024 "Tissue" "27.01.2013" 41 "2 2" NA "F" 0 0.997 0.9978 606933 -118594
+"599" "AP.084C" "Dinaric" "Dinaric" "Mortality-HR" "Dalmatia (HR)" NA NA FALSE 1 "Tissue" "3.03.2007" 37 "2 2" NA "F" 0 0.997 0.998 627283 -147468
+"521" "AP.07U0" "Dinaric" "Dinaric" "Mortality-HR" "Dalmatia (HR)" NA NA FALSE 1 "Tissue" "30.08.2001" 37 "1 2" "1 1" "M" 0 0.9974 0.9952 685516 -211531
+"579" "AP.0824" "Dinaric" "Dinaric" "Mortality-HR" "Dalmatia (HR)" NA NA FALSE 1 "Tissue" "1.10.2002" 37 "1 2" "1 1" "M" 0 0.9975 0.998 632885 -163751
+"500" "AP.07P6" "Dinaric" "Dinaric" "Mortality-HR" "Dalmatia (HR)" NA NA FALSE 0.945946 "Tissue" "15.06.1998" 37 "2 2" NA "F" 0 0.9976 0.997 599900 -173400
+"673" "AP.088J" "Dinaric" "Dinaric" "Mortality-HR" "Dalmatia (HR)" NA NA FALSE 0.892857 "Tissue" "7.11.2011" 42 "1 2" "1 1" "M" 0 0.9979 0.998 574843 -126806
+"755" "CH.0LM1" "Dinaric" "Dinaric" "Mortality-HR" "Dalmatia (HR)" NA NA FALSE 0.939024 "Tissue" "6.01.2013" 41 "2 2" NA "F" 0 0.998 0.998 582367 -157302
+"694" "AP.08AJ" "Dinaric" "Dinaric" "Mortality-HR" "Dalmatia (HR)" NA NA FALSE 0.892857 "Tissue" "13.03.2011" 42 "2 2" NA "F" 0 0.998 0.998 587447 -164705
+"497" "AP.07P2" "Dinaric" "Dinaric" "Mortality-HR" "Dalmatia (HR)" NA NA FALSE 1 "Tissue" "25.10.1998" 37 "2 2" NA "F" 0 0.998 0.998 603350 -170790
+"498" "AP.07P4" "Dinaric" "Dinaric" "Mortality-HR" "Dalmatia (HR)" NA NA FALSE 1 "Tissue" "27.01.1997" 37 "2 2" NA "F" 0 0.998 0.998 625246 -148198
+"544" "AP.07XM" "Dinaric" "Dinaric" "Mortality-HR" "Dalmatia (HR)" NA NA FALSE 0.986486 "Tissue" "14.01.1996" 37 "2 2" NA "F" 0 0.998 0.998 630736 -158673
+"545" "AP.07XT" "Dinaric" "Dinaric" "Mortality-HR" "Dalmatia (HR)" NA NA FALSE 1 "Tissue" "14.01.1996" 37 "2 2" "1 1" "F" 0 0.998 0.998 630736 -158673
+"588" "AP.083T" "Dinaric" "Dinaric" "Mortality-HR" "Dalmatia (HR)" NA NA FALSE 1 "Tissue" "21.06.2009" 37 "1 2" "1 1" "M" 0 0.998 0.997 632704 -164087
+"665" "AP.0885" "Dinaric" "Dinaric" "Mortality-HR" "Dalmatia (HR)" NA NA FALSE 0.920635 "Tissue" "20.11.2011" 42 "1 2" "1 1" "M" 0 0.998 0.9946 688582 -218050
+"556" "AP.07YU" "Dinaric" "Dinaric" "Mortality-HR" "Dalmatia (HR)" NA NA FALSE 0.873874 "Decomposing Tissue" "15.12.1998" 37 "2 2" NA "F" 0 0.9981 0.9982 602654 -168642
+"511" "AP.07T1" "Dinaric" "Dinaric" "Mortality-HR" "Dalmatia (HR)" NA NA FALSE 0.828829 "Decomposing Tissue" "28.02.2008" 37 "1 2" "1 1" "M" 0 0.9914 0.9894 682368 -181304
+"645" "AP.0875" "Dinaric" "Dinaric" "Mortality-HR" "Dalmatia (HR)" NA NA FALSE 0.90873 "Tissue" "19.10.2010" 42 "2 2" NA "F" 0 0.9504 0.9636 538593 -103304
+"573" "AP.081M" "Dinaric" "Dinaric" "Mortality-HR" "Dalmatia (HR)" NA NA FALSE 1 "Tissue" "27.11.2008" 37 "2 2" NA "F" 0 0.9783 0.9784 546642 -126502
+"530" "AP.07UH" "Dinaric" "Dinaric" "Mortality-HR" "Dalmatia (HR)" NA NA FALSE 1 "Tissue" "22.03.2006" 37 "1 2" "1 1" "M" 0 0.9803 0.9912 715088 -231663
+"677" "AP.088P" "Dinaric" "Dinaric" "Mortality-HR" "Dalmatia (HR)" NA NA FALSE 0.884921 "Tissue" "28.11.2010" 42 "2 2" NA "F" 0 0.9872 0.9932 657571 -195563
+"605" "AP.084T" "Dinaric" "Dinaric" "Mortality-HR" "Dalmatia (HR)" NA NA FALSE 1 "Tissue" "17.03.2009" 37 "1 2" "1 1" "M" 0 0.9874 0.973 531048 -107382
+"624" "AP.085U" "Dinaric" "Dinaric" "Mortality-HR" "Dalmatia (HR)" NA NA FALSE 0.914634 "Tissue" "1.11.2012" 41 "2 2" NA "F" 0 0.996 0.992 525500 -102581
+"663" "AP.0883" "Dinaric" "Dinaric" "Mortality-HR" "Dalmatia (HR)" NA NA FALSE 0.890873 "Tissue" "29.01.2012" 42 "1 2" "1 1" "M" 0 0.9964 0.99 541429 -101191
+"534" "AP.07UT" "Phybrid" "Dinaric" "Mortality-HR" "Dalmatia (HR)" NA NA FALSE 1 "Tissue" "24.12.2005" 37 "1 2" "1 1" "M" 0 0.8833 0.913 651368 -170247
+"631" "AP.0864" "Phybrid" "Dinaric" "Mortality-HR" "Dalmatia (HR)" NA NA FALSE 0.914634 "Tissue" "9.12.2012" 41 "2 2" NA "F" 0 0.9303 0.9824 673276 -183082
+"742" "AY.0F1M" "Dinaric" "Dinaric" "HR_noninvasive" "Gorski kotar (HR)" NA NA FALSE 0.952703 "Scat" "22.10.2012" 37 "1 2" "1 1" "M" 0 0.997 0.997 502078 -23913
+"737" "AX.0E0L" "Dinaric" "Dinaric" "HR_noninvasive" "Gorski kotar (HR)" "Gomance" "-" FALSE 0.941667 "Scat" "22.05.2012" 40 "2 2" NA "F" -1 0.998 0.9986 462701 36797
+"736" "AX.0CYK" "Dinaric" "Dinaric" "HR_noninvasive" "Gorski kotar (HR)" NA NA FALSE 0.888158 "Scat" "6.03.2012" 38 "2 2" NA "F" 0 0.998 0.9974 508407 -49681
+"720" "AU.0ALU" "Dinaric" "Dinaric" "HR_noninvasive" "Gorski kotar (HR)" "Dalmacija" "Gomance" TRUE 0.855159 "Scat" "10.07.2010" 42 "2 2" NA "F" -1 0.9985 0.9982 464481 35094
+"721" "AU.0AMA" "Dinaric" "Dinaric" "HR_noninvasive" "Gorski kotar (HR)" "Gomance" "Gomance2" TRUE 0.702381 "Scat" "26.08.2010" 42 "2 2" NA "F" -1 0.9986 0.9984 461024 41341
+"490" "AP.07M6" "Dinaric" "Dinaric" "Mortality" "Gorski kotar (HR)" "Gomance" "-" FALSE 0.914634 "Tissue" "7.01.2012" 41 "1 2" "1 1" "M" 0 0.998 0.9982 458035 39774
+"508" "AP.07PK" "Dinaric" "Dinaric" "Mortality-HR" "Gorski kotar (HR)" NA NA FALSE 0.419512 "Decomposing Tissue" "10.05.2008" 41 "1 2" "1 1" "M" 0 0.9939 0.989 479374 28534
+"506" "AP.07PH" "Dinaric" "Dinaric" "Mortality-HR" "Gorski kotar (HR)" NA NA FALSE 0.598198 "Decomposing Tissue" "2.04.2004" 37 "1 2" "1 1" "M" 0 0.9821 0.973 499446 -12806
+"548" "AP.07Y0" "Dinaric" "Dinaric" "Mortality-HR" "Gorski kotar (HR)" NA NA FALSE 0.536585 "Decomposing Tissue" "10.05.2008" 41 "2 2" "1 1" "F" 0 0.993 0.9928 479374 28534
+"517" "AP.07TH" "Dinaric" "Dinaric" "Mortality-HR" "Gorski kotar (HR)" NA NA FALSE 0.711712 "Decomposing Tissue" "5.01.1999" 37 "2 2" NA "F" 0 0.998 0.998 466900 49300
+"525" "AP.07U5" "Dinaric" "Dinaric" "Mortality-HR" "Gorski kotar (HR)" NA NA FALSE 0.792793 "Decomposing Tissue" "2.01.2005" 37 "2 2" NA "F" 0 0.9891 0.987 523815 28431
+"648" "AP.087C" "Dinaric" "Dinaric" "Mortality-HR" "Gorski kotar (HR)" NA NA FALSE 0.892857 "Tissue" "21.11.2010" 42 "1 2" "1 1" "M" 0 0.99 0.9804 486101 3417
+"572" "AP.081L" "Dinaric" "Dinaric" "Mortality-HR" "Gorski kotar (HR)" NA NA FALSE 0.986486 "Tissue" "9.08.2007" 37 "1 2" "1 1" "M" 0 0.9914 0.994 522064 1355
+"613" "AP.0855" "Dinaric" "Dinaric" "Mortality-HR" "Gorski kotar (HR)" NA NA FALSE 1 "Tissue" "21.12.2008" 37 "1 2" "1 1" "M" 0 0.9919 0.9824 520370 -22699
+"540" "AP.07X7" "Dinaric" "Dinaric" "Mortality-HR" "Gorski kotar (HR)" NA NA FALSE 1 "Tissue" "29.08.1997" 37 "1 2" "1 1" "M" 0 0.992 0.9916 514140 20900
+"782" "AP.081H" "Dinaric" "Dinaric" "Mortality-HR" "Gorski kotar (HR)" NA NA FALSE 0.886179 "Tissue" "27.07.2003" 41 "1 2" "1 1" "M" 0 0.9922 0.9926 535534 -31629
+"602" "AP.084H" "Dinaric" "Dinaric" "Mortality-HR" "Gorski kotar (HR)" NA NA FALSE 0.802846 "Decomposing Tissue" "24.10.2007" 41 "1 2" "1 1" "M" 0 0.9924 0.9912 458036 39690
+"496" "AP.07P0" "Dinaric" "Dinaric" "Mortality-HR" "Gorski kotar (HR)" NA NA FALSE 1 "Tissue" "15.09.2007" 37 "1 2" "1 1" "M" -1 0.9933 0.9904 507066 -33546
+"615" "AP.0857" "Dinaric" "Dinaric" "Mortality-HR" "Gorski kotar (HR)" NA NA FALSE 1 "Tissue" "12.01.2009" 37 "1 2" "1 1" "M" 0 0.9944 0.995 482927 19683
+"617" "AP.085F" "Dinaric" "Dinaric" "Mortality-HR" "Gorski kotar (HR)" NA NA FALSE 0.990991 "Decomposing Tissue" "3.12.2009" 37 "2 2" NA "F" 0 0.995 0.9966 472500 26500
+"603" "AP.084J" "Dinaric" "Dinaric" "Mortality-HR" "Gorski kotar (HR)" NA NA FALSE 0.890244 "Tissue" "16.01.2010" 41 "1 2" "1 1" "M" 0 0.995 0.996 501242 22080
+"557" "AP.07YY" "Dinaric" "Dinaric" "Mortality-HR" "Gorski kotar (HR)" NA NA FALSE 0.783784 "Decomposing Tissue" "21.03.2008" 37 "1 2" "1 1" "M" 0 0.995 0.995 520827 7380
+"640" "AP.086X" "Dinaric" "Dinaric" "Mortality-HR" "Gorski kotar (HR)" NA NA FALSE 0.892857 "Tissue" "15.10.2010" 42 "1 2" "1 1" "M" 0 0.995 0.9864 554368 -39387
+"516" "AP.07TF" "Dinaric" "Dinaric" "Mortality-HR" "Gorski kotar (HR)" NA NA FALSE 1 "Tissue" "13.11.1996" 37 "2 2" NA "F" 0 0.9953 0.998 478450 28000
+"698" "AP.08AP" "Dinaric" "Dinaric" "Mortality-HR" "Gorski kotar (HR)" NA NA FALSE 0.892857 "Tissue" "27.10.2010" 42 "1 2" "1 1" "M" 0 0.9955 0.9956 497742 20361
+"667" "AP.0887" "Dinaric" "Dinaric" "Mortality-HR" "Gorski kotar (HR)" NA NA FALSE 0.896825 "Tissue" "19.11.2011" 42 "1 2" "1 1" "M" 0 0.9959 0.9886 498262 -6855
+"696" "AP.08AL" "Dinaric" "Dinaric" "Mortality-HR" "Gorski kotar (HR)" "Neznano" "-" FALSE 0.892857 "Tissue" "7.12.2011" 42 "1 2" "1 1" "M" 0 0.996 0.997 500971 28419
+"681" "AP.088Y" "Dinaric" "Dinaric" "Mortality-HR" "Gorski kotar (HR)" NA NA FALSE 0.892857 "Tissue" "16.11.2010" 42 "2 2" NA "F" 0 0.996 0.9886 508113 -5997
+"504" "AP.07PE" "Dinaric" "Dinaric" "Mortality-HR" "Gorski kotar (HR)" NA NA FALSE 0.945946 "Tissue" "15.08.2002" 37 "2 2" NA "F" 0 0.9968 0.9902 554944 -38847
+"701" "AP.08AX" "Dinaric" "Dinaric" "Mortality-HR" "Gorski kotar (HR)" NA NA FALSE 0.892857 "Tissue" "26.11.2010" 42 "1 2" "1 1" "M" 0 0.997 0.997 493679 12675
+"751" "CH.0LLT" "Dinaric" "Dinaric" "Mortality-HR" "Gorski kotar (HR)" "Poljanska gora" "-" FALSE 0.918699 "Tissue" "27.12.2012" 41 "2 2" NA "F" 0 0.997 0.997 505200 36250
+"590" "AP.083X" "Dinaric" "Dinaric" "Mortality-HR" "Gorski kotar (HR)" NA NA FALSE 0.873874 "Decomposing Tissue" "19.10.2007" 37 "1 2" "1 1" "M" 0 0.997 0.997 511512 -54678
+"679" "AP.088U" "Dinaric" "Dinaric" "Mortality-HR" "Gorski kotar (HR)" "Snje?nik2" "-" FALSE 0.896825 "Tissue" "3.11.2011" 42 "2 2" NA "F" 0 0.9979 0.998 463278 50186
+"671" "AP.088E" "Dinaric" "Dinaric" "Mortality-HR" "Gorski kotar (HR)" NA NA FALSE 0.777778 "Tissue" "18.12.2011" 42 "1 2" "1 1" "M" 0 0.9979 0.9972 486169 4651
+"586" "AP.083E" "Dinaric" "Dinaric" "Mortality-HR" "Gorski kotar (HR)" NA NA FALSE 1 "Tissue" "13.11.2006" 37 "2 2" NA "F" 0 0.998 0.998 469206 49043
+"558" "AP.0801" "Dinaric" "Dinaric" "Mortality-HR" "Gorski kotar (HR)" NA NA FALSE 1 "Tissue" "25.11.2008" 37 "1 2" "1 1" "M" 0 0.998 0.998 470989 48671
+"611" "AP.0852" "Dinaric" "Dinaric" "Mortality-HR" "Gorski kotar (HR)" NA NA FALSE 0.914634 "Tissue" "25.02.2010" 41 "1 2" "1 1" "M" 0 0.998 0.998 471108 19118
+"684" "AP.08A3" "Dinaric" "Dinaric" "Mortality-HR" "Gorski kotar (HR)" "Risnjak" "-" FALSE 0.892857 "Tissue" "9.03.2012" 42 "2 2" NA "F" 0 0.998 0.9984 484225 30950
+"531" "AP.07UJ" "Dinaric" "Dinaric" "Mortality-HR" "Gorski kotar (HR)" NA NA FALSE 1 "Tissue" "16.11.2005" 37 "1 2" "1 1" "M" 0 0.998 0.998 489960 26358
+"632" "AP.0866" "Dinaric" "Dinaric" "Mortality-HR" "Gorski kotar (HR)" NA NA FALSE 0.914634 "Tissue" "6.12.2012" 41 "1 2" "1 1" "M" 0 0.998 0.998 493679 12675
+"702" "AP.08AY" "Dinaric" "Dinaric" "Mortality-HR" "Gorski kotar (HR)" NA NA FALSE 0.892857 "Tissue" "12.12.2010" 42 "1 2" "1 1" "M" 0 0.998 0.998 498262 -6855
+"651" "AP.087H" "Dinaric" "Dinaric" "Mortality-HR" "Gorski kotar (HR)" NA NA FALSE 0.940476 "Tissue" "19.02.2010" 42 "1 2" "1 1" "M" 0 0.998 0.998 498344 -33266
+"618" "AP.085H" "Dinaric" "Dinaric" "Mortality-HR" "Gorski kotar (HR)" NA NA FALSE 0.986486 "Tissue" "23.11.2009" 37 "2 2" NA "F" 0 0.998 0.998 498803 21101
+"598" "AP.084A" "Dinaric" "Dinaric" "Mortality-HR" "Gorski kotar (HR)" NA NA FALSE 1 "Tissue" "21.11.2007" 37 "2 2" NA "F" 0 0.998 0.998 500854 2709
+"662" "AP.0882" "Dinaric" "Dinaric" "Mortality-HR" "Gorski kotar (HR)" NA NA FALSE 0.973684 "Tissue" "4.11.2006" 38 "2 2" NA "F" 0 0.998 0.9974 504609 23442
+"760" "CH.0LM6" "Dinaric" "Dinaric" "Mortality-HR" "Gorski kotar (HR)" "Poljanska gora" "-" FALSE 0.914634 "Tissue" "27.12.2012" 41 "2 2" NA "F" 0 0.998 0.9982 505100 36225
+"654" "AP.087L" "Dinaric" "Dinaric" "Mortality-HR" "Gorski kotar (HR)" NA NA FALSE 0.892857 "Tissue" "25.10.2010" 42 "1 2" "1 1" "M" 0 0.998 0.998 507423 -34818
+"606" "AP.084U" "Dinaric" "Dinaric" "Mortality-HR" "Gorski kotar (HR)" NA NA FALSE 0.986486 "Tissue" "11.09.2009" 37 "1 2" "1 1" "M" 0 0.998 0.998 508250 -42030
+"700" "AP.08AU" "Dinaric" "Dinaric" "Mortality-HR" "Gorski kotar (HR)" NA NA FALSE 0.869048 "Tissue" "19.11.2010" 42 "2 2" NA "F" 0 0.998 0.998 512192 23689
+"614" "AP.0856" "Dinaric" "Dinaric" "Mortality-HR" "Gorski kotar (HR)" NA NA FALSE 0.945946 "Tissue" "9.12.2008" 37 "1 2" "1 1" "M" 0 0.9981 0.999 466382 42483
+"633" "AP.0867" "Dinaric" "Dinaric" "Mortality-HR" "Gorski kotar (HR)" "Snje?nik" "-" FALSE 0.914634 "Tissue" "3.11.2012" 41 "2 2" NA "F" -1 0.9985 0.9982 472162 41103
+"538" "AP.07X1" "Dinaric" "Dinaric" "Mortality-HR" "Gorski kotar (HR)" NA NA FALSE 1 "Tissue" "15.07.2006" 37 "2 2" NA "F" 0 0.9987 0.9984 478395 24243
+"669" "AP.088A" "Dinaric" "Dinaric" "Mortality-HR" "Gorski kotar (HR)" NA NA FALSE 0.888889 "Tissue" "2.11.2011" 42 "1 2" "1 1" "M" 0 0.9937 0.9938 494732 -29087
+"686" "AP.08A5" "Dinaric" "Dinaric" "Mortality-HR" "Gorski kotar (HR)" NA NA FALSE 0.892857 "Tissue" "8.01.2011" 42 "2 2" NA "F" 0 0.998 0.998 492854 -30122
+"629" "AP.0862" "Dinaric" "Dinaric" "Mortality-HR" "Gorski kotar (HR)" NA NA FALSE 0.926829 "Tissue" "10.11.2012" 41 "2 2" NA "F" 0 0.998 0.998 496887 -50961
+"649" "AP.087E" "Dinaric" "Dinaric" "Mortality-HR" "Gorski kotar (HR)" NA NA FALSE 0.890873 "Tissue" "25.02.2010" 42 "2 2" NA "F" 0 0.998 0.9982 497363 -53175
+"675" "AP.088L" "Dinaric" "Dinaric" "Mortality-HR" "Gorski kotar (HR)" NA NA FALSE 0.896825 "Tissue" "6.11.2011" 42 "2 2" NA "F" 0 0.9985 0.998 495379 -17886
+"592" "AP.0840" "Neznano" "Dinaric" "Mortality-HR" "Gorski kotar (HR)" NA NA FALSE 1 "Tissue" "23.10.2009" 37 "1 2" "1 1" "M" 0 NA 0.998 483000 25350
+"722" "AU.0AME" "Dinaric" "Dinaric" "Noninvasive - SLO" "Gorski kotar (HR)" "Risnjak" "Risnjak" TRUE 0.926042 "Scat" "22.08.2010" 40 "2 2" NA "F" 0 0.996 0.997 469136 27583
+"468" "AP.07Y3" "Dinaric" "Dinaric" "Telemetry" "Gorski kotar (HR)" "Gomance" "Javorniki" TRUE 0.783784 "Blood" "21.08.2010" 37 "2 2" NA "F" -1 0.998 0.998 462293 37050
+"478" "AM.07FP" "Dinaric" "Dinaric" "Telemetry" "Gorski kotar (HR)" "Gomance" "-" FALSE 0.894309 "Blood" "16.07.2012" 41 "1 2" "1 1" "M" 0 0.998 0.998 462525 35047
+"477" "AM.07FM" "Dinaric" "Dinaric" "Telemetry" "Gorski kotar (HR)" "Snje?nik2" "-" FALSE 0.918699 "Blood" "18.07.2010" 41 "2 2" NA "F" 0 0.998 0.997 468942 44304
+"583" "AP.082K" "Dinaric" "Dinaric" "Mortality-HR" "Croatia - other" NA NA FALSE 0.972973 "Tissue" NA 37 "1 2" "1 1" "M" 0 0.9879 0.9892 NA NA
+"622" "AP.085P" "Dinaric" "Dinaric" "Mortality-HR" "Croatia - other" NA NA FALSE 1 "Tissue" "7.02.2007" 37 "2 2" NA "F" 0 0.9741 0.9912 536907 7525
+"627" "AP.0860" "Dinaric" "Dinaric" "Mortality-HR" "Croatia - other" NA NA FALSE 0.914634 "Tissue" "26.10.2012" 41 "2 2" NA "F" 0 0.9749 0.9794 586420 7917
+"644" "AP.0874" "Dinaric" "Dinaric" "Mortality-HR" "Croatia - other" NA NA FALSE 0.90873 "Tissue" "19.03.2011" 42 "1 2" "1 1" "M" 0 0.9896 0.9872 558162 38346
+"703" "AP.08C0" "Dinaric" "Dinaric" "Mortality-HR" "Croatia - other" NA NA FALSE 0.884921 "Tissue" "4.11.2011" 42 "1 2" "1 1" "M" 0 0.9926 0.9924 586420 7917
+"619" "AP.085J" "Dinaric" "Dinaric" "Mortality-HR" "Croatia - other" NA NA FALSE 1 "Tissue" "17.05.2009" 37 "2 2" NA "F" 0 0.998 0.998 684866 7164
+"486" "AP.07M2" "Dinaric" "Dinaric" "Mortality" "Lika (HR)" NA NA FALSE 0.764228 "Decomposing Tissue" "7.11.2011" 41 "2 2" NA "F" 0 0.984 0.9914 587344 -116385
+"487" "AP.07M3" "Dinaric" "Dinaric" "Mortality" "Lika (HR)" NA NA FALSE 0.815041 "Decomposing Tissue" "22.06.2012" 41 "2 2" NA "F" 0 0.9507 0.9112 586945 -115200
+"485" "AP.07M1" "Dinaric" "Dinaric" "Mortality" "Lika (HR)" NA NA FALSE 0.914634 "Tissue" "13.06.2012" 41 "1 2" "1 1" "M" 0 0.997 0.9968 566302 -95202
+"491" "AP.07M7" "Dinaric" "Dinaric" "Mortality" "Lika (HR)" NA NA FALSE 0.918699 "Tissue" "30.11.2011" 41 "2 2" "1 1" "M" 0 0.997 0.9974 577486 -75969
+"493" "AP.07MA" "Dinaric" "Dinaric" "Mortality" "Lika (HR)" NA NA FALSE 1 "Tissue" "6.10.2006" 37 "1 2" "1 1" "M" 0 0.998 0.998 530941 -53158
+"483" "AP.07LY" "Dinaric" "Dinaric" "Mortality" "Lika (HR)" NA NA FALSE 0.914634 "Tissue" "12.11.2011" 41 "2 2" NA "F" 0 0.998 0.9972 581763 -68131
+"578" "AP.0823" "Dinaric" "Dinaric" "Mortality-HR" "Lika (HR)" NA NA FALSE 0.751802 "Decomposing Tissue" "11.02.1996" 37 "1 2" "1 1" "M" 0 0.996 0.9932 561700 -67150
+"523" "AP.07U2" "Dinaric" "Dinaric" "Mortality-HR" "Lika (HR)" NA NA FALSE 0.767568 "Decomposing Tissue" "22.09.2001" 37 "1 2" "1 1" "M" 0 0.9508 0.998 552162 -55597
+"555" "AP.07YT" "Dinaric" "Dinaric" "Mortality-HR" "Lika (HR)" NA NA FALSE 0.873874 "Decomposing Tissue" "25.11.2003" 37 "2 2" "1 1" "M" 0 0.997 0.997 534428 -70295
+"612" "AP.0853" "Dinaric" "Dinaric" "Mortality-HR" "Lika (HR)" NA NA FALSE 0.945946 "Tissue" "30.11.2008" 37 "1 2" "1 1" "M" 0 0.9514 0.9208 557305 -103373
+"524" "AP.07U3" "Dinaric" "Dinaric" "Mortality-HR" "Lika (HR)" NA NA FALSE 1 "Tissue" "6.02.1998" 37 "2 2" NA "F" 0 0.9646 0.9486 574471 -67398
+"581" "AP.0827" "Dinaric" "Dinaric" "Mortality-HR" "Lika (HR)" NA NA FALSE 0.939024 "Tissue" "11.02.2010" 41 "2 2" NA "F" 0 0.9819 0.9854 594717 -107514
+"670" "AP.088C" "Dinaric" "Dinaric" "Mortality-HR" "Lika (HR)" NA NA FALSE 0.896825 "Tissue" "2.02.2011" 42 "2 2" NA "F" 0 0.9836 0.969 544256 -48202
+"692" "AP.08AF" "Dinaric" "Dinaric" "Mortality-HR" "Lika (HR)" NA NA FALSE 0.920635 "Tissue" "5.11.2010" 42 "1 2" "1 1" "M" 0 0.9881 0.9892 585640 -100780
+"575" "AP.081T" "Dinaric" "Dinaric" "Mortality-HR" "Lika (HR)" NA NA FALSE 1 "Tissue" "21.11.2007" 37 "1 2" "1 1" "M" 0 0.9886 0.989 601190 -107629
+"680" "AP.088X" "Dinaric" "Dinaric" "Mortality-HR" "Lika (HR)" NA NA FALSE 0.916667 "Tissue" "15.11.2010" 42 "1 2" "1 1" "M" 0 0.9922 0.9728 558849 -69004
+"658" "AP.087U" "Dinaric" "Dinaric" "Mortality-HR" "Lika (HR)" NA NA FALSE 0.674603 "Tissue" "12.12.2010" 42 "1 2" "1 1" "M" 0 0.9923 0.9912 548963 -45342
+"661" "AP.0881" "Dinaric" "Dinaric" "Mortality-HR" "Lika (HR)" NA NA FALSE 0.896825 "Tissue" "21.10.2011" 42 "1 2" "1 1" "M" 0 0.9928 0.9928 552162 -55597
+"659" "AP.087X" "Dinaric" "Dinaric" "Mortality-HR" "Lika (HR)" NA NA FALSE 0.896825 "Tissue" "13.11.2010" 42 "1 2" "1 1" "M" 0 0.9938 0.9946 569658 -67296
+"657" "AP.087T" "Dinaric" "Dinaric" "Mortality-HR" "Lika (HR)" NA NA FALSE 0.944444 "Tissue" "9.11.2010" 42 "1 2" "1 1" "M" 0 0.9944 0.9842 591713 -121198
+"693" "AP.08AH" "Dinaric" "Dinaric" "Mortality-HR" "Lika (HR)" NA NA FALSE 0.892857 "Tissue" "30.10.2011" 42 "2 2" NA "F" 0 0.995 0.9956 548113 -65186
+"683" "AP.08A1" "Dinaric" "Dinaric" "Mortality-HR" "Lika (HR)" NA NA FALSE 0.884921 "Tissue" "27.12.2011" 42 "1 2" "1 1" "M" 0 0.9951 0.9958 598605 -115316
+"574" "AP.081P" "Dinaric" "Dinaric" "Mortality-HR" "Lika (HR)" NA NA FALSE 0.966216 "Tissue" "4.04.2008" 37 "1 1" "1 1" "M" 0 0.9954 0.9946 540842 -76455
+"502" "AP.07PA" "Dinaric" "Dinaric" "Mortality-HR" "Lika (HR)" NA NA FALSE 1 "Tissue" "21.09.2004" 37 "2 2" NA "F" 0 0.996 0.9958 578583 -65924
+"653" "AP.087K" "Dinaric" "Dinaric" "Mortality-HR" "Lika (HR)" NA NA FALSE 0.876984 "Tissue" "7.02.2011" 42 "1 2" "1 1" "M" 0 0.996 0.9968 589309 -119919
+"600" "AP.084E" "Dinaric" "Dinaric" "Mortality-HR" "Lika (HR)" NA NA FALSE 0.986486 "Tissue" "26.11.2007" 37 "1 2" "1 1" "M" 0 0.9963 0.997 586653 -114024
+"553" "AP.07YC" "Dinaric" "Dinaric" "Mortality-HR" "Lika (HR)" NA NA FALSE 1 "Tissue" "31.08.2005" 37 "1 2" "1 1" "M" 0 0.9966 0.997 573125 -82437
+"608" "AP.084Y" "Dinaric" "Dinaric" "Mortality-HR" "Lika (HR)" NA NA FALSE 1 "Tissue" "27.12.2008" 37 "2 2" NA "F" 0 0.997 0.997 541743 -67492
+"630" "AP.0863" "Dinaric" "Dinaric" "Mortality-HR" "Lika (HR)" NA NA FALSE 0.939024 "Tissue" "30.10.2012" 41 "1 2" "1 1" "M" 0 0.997 0.997 543200 -52500
+"604" "AP.084P" "Dinaric" "Dinaric" "Mortality-HR" "Lika (HR)" NA NA FALSE 1 "Tissue" "24.01.2009" 37 "1 2" "1 1" "M" 0 0.997 0.9942 548963 -45342
+"571" "AP.081K" "Dinaric" "Dinaric" "Mortality-HR" "Lika (HR)" NA NA FALSE 0.972973 "Tissue" "22.11.2009" 37 "2 2" NA "F" 0 0.997 0.997 553906 -62943
+"503" "AP.07PC" "Dinaric" "Dinaric" "Mortality-HR" "Lika (HR)" NA NA FALSE 0.986486 "Tissue" "9.10.2000" 37 "1 2" "1 1" "M" 0 0.997 0.997 569673 -88335
+"647" "AP.087A" "Dinaric" "Dinaric" "Mortality-HR" "Lika (HR)" NA NA FALSE 0.90873 "Tissue" "26.02.2011" 42 "1 2" "1 1" "M" 0 0.997 0.9836 579058 -115091
+"620" "AP.085K" "Dinaric" "Dinaric" "Mortality-HR" "Lika (HR)" NA NA FALSE 1 "Tissue" "27.12.2006" 37 "1 2" "1 1" "M" 0 0.9977 0.998 557271 -53560
+"528" "AP.07U8" "Dinaric" "Dinaric" "Mortality-HR" "Lika (HR)" NA NA FALSE 1 "Tissue" "11.05.2004" 37 "1 2" "1 1" "M" 0 0.9979 0.9974 535062 -60984
+"625" "AP.085X" "Dinaric" "Dinaric" "Mortality-HR" "Lika (HR)" NA NA FALSE 0.914634 "Tissue" "4.11.2012" 41 "1 2" "1 1" "M" 0 0.998 0.997 544000 -66900
+"589" "AP.083U" "Dinaric" "Dinaric" "Mortality-HR" "Lika (HR)" NA NA FALSE 0.959459 "Tissue" "15.10.2007" 37 "1 2" "1 1" "M" 0 0.998 0.9978 544256 -48202
+"594" "AP.0842" "Dinaric" "Dinaric" "Mortality-HR" "Lika (HR)" NA NA FALSE 0.972973 "Decomposing Tissue" "22.11.2009" 37 "1 2" "1 1" "M" 0 0.998 0.998 548458 -69944
+"551" "AP.07Y7" "Dinaric" "Dinaric" "Mortality-HR" "Lika (HR)" NA NA FALSE 1 "Tissue" "21.08.2005" 37 "2 2" NA "F" 0 0.998 0.9978 558849 -69004
+"533" "AP.07UM" "Dinaric" "Dinaric" "Mortality-HR" "Lika (HR)" NA NA FALSE 1 "Tissue" "11.02.1996" 37 "1 2" "1 1" "M" 0 0.9983 0.9982 561700 -67150
+"432" "AH.03MT" "Dinaric" "Dinaric" "Damages" "Slovenia" "Neznano" "Slavnik" TRUE 0.8575 "Saliva" "23.04.2010" 40 "1 2" "1 1" "M" -1 0.994 0.9946 415129 48776
+"445" "AH.03HM" "Dinaric" "Dinaric" "Damages" "Slovenia" "Slavnik" "-" FALSE 0.905159 "Saliva" "29.03.2011" 42 "2 2" NA "F" -1 0.998 0.998 410808 61330
+"447" "AH.03MK" "Dinaric" "Dinaric" "Damages" "Slovenia" "Slavnik" "Slavnik" TRUE 0.864583 "Saliva" "23.04.2010" 40 "2 2" NA "F" -1 0.998 0.998 415129 48776
+"731" "AX.0CF2" "Dinaric" "Dinaric" "Damages" "Slovenia" "Vrem‹ica" "Meni‹ija" TRUE 0.97973 "Saliva" "13.10.2012" 37 "2 2" NA "F" -1 0.998 0.998 441279 56568
+"428" "AX.0CFA" "Dinaric" "Dinaric" "Damages" "Slovenia" "Neznano" "Vrem‹ica" TRUE 0.918919 "Saliva" "2.09.2012" 37 "1 2" "1 1" "M" -1 0.998 0.998 443635 59494
+"735" "EE.156X" "Dinaric" "Dinaric" "Damages" "Slovenia" "Neznano" "Mala gora" TRUE 0.95625 "Saliva" "20.04.2012" 40 "2 2" "1 1" NA -1 0.998 0.998 490280 60309
+"792" "AL.05XA" "Dinaric" "Dinaric" "Damages" "Slovenia" NA NA FALSE 0.986486 "Urine" "24.03.2013" 37 "2 2" NA "F" -1 0.9985 0.9986 448148 81575
+"434" "AH.02UH" "Dinaric" "Dinaric" "Sampled Litter" "Slovenia" "Vrem‹ica" "-" FALSE 0.870833 "Direct Saliva" "30.05.2012" 40 "1 2" "1 1" "M" 0 0.9931 0.9938 430260 63609
+"433" "AH.02UE" "Dinaric" "Dinaric" "Sampled Litter" "Slovenia" "Vrem‹ica" "-" FALSE 0.845 "Direct Saliva" "30.05.2012" 40 "1 2" "1 1" "M" -1 0.996 0.996 430263 63602
+"444" "AH.038A" "Dinaric" "Dinaric" "Sampled Litter" "Slovenia" "Vrem‹ica" "-" FALSE 0.952381 "Direct Saliva" "23.06.2011" 42 "2 2" NA "F" -1 0.998 0.998 428961 75076
+"789" "AP.07LK" "Dinaric" "Dinaric" "Mortality" "Slovenia" "Meni‹ija" "-" FALSE 0.972973 "Tissue" "7.01.2014" 37 "1 2" "1 1" "M" 0 0.995 0.9978 445930 74960
+"788" "AP.07LJ" "Dinaric" "Dinaric" "Mortality" "Slovenia" "Neznano" "-" FALSE 0.972973 "Tissue" "15.12.2013" 37 "2 2" NA "F" 0 0.996 0.996 446681 42954
+"436" "AP.07LM" "Dinaric" "Dinaric" "Mortality" "Slovenia" "Neznano" "Vrem‹ica" TRUE 0.865854 "Tissue" "10.06.2013" 41 "2 2" NA "F" -1 0.9893 0.9926 437488 62038
+"405" "343y" "Dinaric" "Dinaric" "Mortality" "Slovenia" NA NA FALSE 0.97619 "Tissue" "8.06.2006" 42 "1 2" "1 1" "M" 0 0.9939 0.997 467976 60784
+"396" "057y" "Dinaric" "Dinaric" "Mortality" "Slovenia" NA NA FALSE 1 "Tissue" "4.11.2003" 42 "2 2" NA "F" 0 0.9942 0.9972 470783 61748
+"463" "AP.07ML" "Dinaric" "Dinaric" "Mortality" "Slovenia" "Vrem‹ica" "-" FALSE 0.914634 "Tissue" "27.01.2013" 41 "2 2" NA "F" -1 0.9957 0.996 433368 62990
+"424" "6LU" "Dinaric" "Dinaric" "Mortality" "Slovenia" NA NA FALSE 0.928571 "Tissue" "11.10.2009" 42 "1 2" "1 1" "M" 0 0.996 0.9954 444705 69632
+"747" "C0H" "Dinaric" "Dinaric" "Mortality" "Slovenia" "Neznano" "Javorniki 2009" TRUE 0.97619 "Tissue" "7.11.2009" 42 "2 2" NA "F" 0 0.996 0.9944 446440 54490
+"451" "AP.08CF" "Dinaric" "Dinaric" "Mortality" "Slovenia" "Neznano" "Suha krajina" TRUE 0.95625 "Tissue" "23.02.2012" 40 "1 2" "1 1" "M" -1 0.9967 0.997 487590 76680
+"775" "F0X" "Dinaric" "Dinaric" "Mortality" "Slovenia" NA NA FALSE 0.968254 "Tissue" "16.12.2009" 42 "2 2" NA NA -1 0.997 0.997 431030 68410
+"637" "AP.086F" "Dinaric" "Dinaric" "Mortality" "Slovenia" "Slavnik" "-" FALSE 0.914634 "Tissue" "11.11.2012" 41 "1 2" "1 1" "M" -1 0.997 0.997 444043 46876
+"763" "EAM" "Dinaric" "Dinaric" "Mortality" "Slovenia" NA NA FALSE 0.942857 "Tissue" "10.11.2009" 42 "2 2" NA "F" 0 0.997 0.997 444705 69632
+"713" "AP.08CY" "Dinaric" "Dinaric" "Mortality" "Slovenia" "Javnorniki/Snje?nik" "-" FALSE 0.952381 "Tissue" "19.12.2010" 42 "2 2" NA "F" 0 0.997 0.997 454493 55353
+"634" "AP.08C3" "Dinaric" "Dinaric" "Mortality" "Slovenia" "Suha krajina" "-" FALSE 0.975 "Tissue" "11.12.2011" 40 "2 2" NA "F" -1 0.997 0.997 480020 73710
+"391" "035y" "Dinaric" "Dinaric" "Mortality" "Slovenia" NA NA FALSE 0.995238 "Tissue" "4.10.2003" 42 "1 2" "1 1" "M" 0 0.997 0.9966 485616 49925
+"399" "125y" "Dinaric" "Dinaric" "Mortality" "Slovenia" NA NA FALSE 0.988095 "Tissue" "6.12.2004" 42 "2 2" NA "F" 0 0.997 0.9968 496000 47500
+"419" "538y" "Dinaric" "Dinaric" "Mortality" "Slovenia" NA NA FALSE 0.97619 "Tissue" "8.09.2007" 42 "2 2" NA "F" 0 0.9975 0.997 483151 52558
+"711" "AP.08CP" "Dinaric" "Dinaric" "Mortality" "Slovenia" "Vrem‹ica" "-" FALSE 0.952381 "Tissue" "25.01.2011" 42 "1 2" "1 1" "M" 0 0.9977 0.9974 442654 50752
+"418" "537y" "Dinaric" "Dinaric" "Mortality" "Slovenia" NA NA FALSE 0.97619 "Tissue" "27.08.2007" 42 "2 2" NA "F" 0 0.9978 0.9978 487863 65947
+"475" "AP.08E1" "Dinaric" "Dinaric" "Mortality" "Slovenia" "Neznano" "Javorniki/Snje?nik" TRUE 0.952381 "Tissue" "19.12.2010" 42 "1 2" "1 1" "M" -1 0.9979 0.998 454493 55353
+"425" "702y" "Dinaric" "Dinaric" "Mortality" "Slovenia" NA NA FALSE 0.952381 "Tissue" "22.01.2009" 42 "1 2" "1 1" "M" 0 0.9979 0.998 499193 56393
+"715" "AP.08E7" "Dinaric" "Dinaric" "Mortality" "Slovenia" "Gomance" "-" FALSE 0.928571 "Tissue" "22.10.2010" 42 "1 2" "1 1" "M" -1 0.998 0.998 402390 111610
+"708" "AP.08C8" "Dinaric" "Dinaric" "Mortality" "Slovenia" "Slavnik" "-" FALSE 0.975 "Tissue" "31.01.2012" 40 "1 2" "1 1" "M" -1 0.998 0.998 414683 48452
+"450" "CE.0JPU" "Dinaric" "Dinaric" "Mortality" "Slovenia" "Slavnik" "-" FALSE 0.952381 "Blood" "20.10.2010" 42 "1 2" "1 1" "M" -1 0.998 0.998 415083 48769
+"636" "AP.086E" "Dinaric" "Dinaric" "Mortality" "Slovenia" "Slavnik" "-" FALSE 0.939024 "Tissue" "11.11.2012" 41 "2 2" NA "F" -1 0.998 0.998 416594 48458
+"415" "530y" "Dinaric" "Dinaric" "Mortality" "Slovenia" NA NA FALSE 0.97619 "Tissue" "1.01.2007" 42 "1 2" "1 1" "M" 0 0.998 0.998 417835 47410
+"705" "AP.08C4" "Dinaric" "Dinaric" "Mortality" "Slovenia" "Slavnik" "-" FALSE 0.833333 "Tissue" "11.10.2011" 40 "1 2" "1 1" "M" 0 0.998 0.998 419484 47756
+"707" "AP.08C6" "Dinaric" "Dinaric" "Mortality" "Slovenia" "Slavnik" "-" FALSE 0.93125 "Tissue" "14.11.2011" 40 "2 2" NA "F" 0 0.998 0.998 421200 46570
+"398" "070y" "Dinaric" "Dinaric" "Mortality" "Slovenia" NA NA FALSE 0.958333 "Tissue" "7.12.2003" 42 "2 2" NA "F" 0 0.998 0.9978 422426 49151
+"435" "AP.086H" "Dinaric" "Dinaric" "Mortality" "Slovenia" "Vrem‹ica" "-" FALSE 0.914634 "Tissue" "7.12.2012" 41 "1 2" "1 1" "M" -1 0.998 0.9984 426852 62879
+"623" "AP.085T" "Dinaric" "Dinaric" "Mortality" "Slovenia" "Snje?nik2" "-" FALSE 0.914634 "Tissue" "30.10.2012" 41 "2 2" NA "F" 0 0.998 0.998 432050 90700
+"412" "438y" "Dinaric" "Dinaric" "Mortality" "Slovenia" NA NA FALSE 0.936281 "Tissue" "21.12.2006" 42 "2 2" NA "F" 0 0.998 0.998 436316 67049
+"401" "263y" "Dinaric" "Dinaric" "Mortality" "Slovenia" NA NA FALSE 0.97619 "Tissue" "26.12.2005" 42 "1 2" "1 1" "M" 0 0.998 0.998 440477 61570
+"393" "051y" "Dinaric" "Dinaric" "Mortality" "Slovenia" NA NA FALSE 1 "Tissue" "15.08.2003" 42 "2 2" NA "F" 0 0.998 0.998 441287 80387
+"414" "528y" "Dinaric" "Dinaric" "Mortality" "Slovenia" NA NA FALSE 0.97619 "Tissue" "3.08.2007" 42 "2 2" NA "F" 0 0.998 0.998 441315 61632
+"710" "AP.08CE" "Dinaric" "Dinaric" "Mortality" "Slovenia" "Javorniki" " -" FALSE 0.9625 "Tissue" "17.10.2011" 40 "2 2" NA "F" 0 0.998 0.998 446143 55557
+"706" "AP.08C5" "Dinaric" "Dinaric" "Mortality" "Slovenia" "Snje?nik2" "-" FALSE 0.9625 "Tissue" "26.02.2012" 40 "2 2" NA "F" 0 0.998 0.998 448568 70918
+"421" "AP.08E3" "Dinaric" "Dinaric" "Mortality" "Slovenia" "Neznano" "Gomance" TRUE 0.886111 "Tissue" "15.11.2010" 42 "1 2" "1 1" "M" -1 0.998 0.998 456352 63121
+"712" "AP.08CX" "Dinaric" "Dinaric" "Mortality" "Slovenia" "Javorniki" "-" FALSE 0.960317 "Tissue" "11.12.2010" 42 "2 2" NA "F" -1 0.998 0.998 459993 56661
+"709" "AP.08CA" "Dinaric" "Dinaric" "Mortality" "Slovenia" "Suha krajina" "-" FALSE 0.95625 "Tissue" "10.12.2011" 40 "1 2" "1 1" "M" 0 0.998 0.998 479240 75915
+"716" "AP.08E8" "Dinaric" "Dinaric" "Mortality" "Slovenia" "Neznano" "-" TRUE 0.928571 "Tissue" "21.10.2010" 42 "1 2" "1 1" "M" 0 0.998 0.998 481410 53240
+"411" "437y" "Dinaric" "Dinaric" "Mortality" "Slovenia" NA NA FALSE 0.97619 "Tissue" "17.12.2006" 42 "2 2" NA "F" 0 0.998 0.9974 482315 50712
+"410" "431y" "Dinaric" "Dinaric" "Mortality" "Slovenia" NA NA FALSE 0.955177 "Tissue" "4.12.2006" 42 "1 2" "1 1" "M" 0 0.998 0.998 482737 51214
+"406" "390y" "Dinaric" "Dinaric" "Mortality" "Slovenia" NA NA FALSE 0.97619 "Tissue" "2.11.2006" 42 "1 2" "1 1" "M" 0 0.998 0.998 484526 49710
+"423" "697y" "Dinaric" "Dinaric" "Mortality" "Slovenia" NA NA FALSE 0.971429 "Tissue" "11.01.2009" 42 "1 2" "1 1" "M" 0 0.998 0.998 484844 50185
+"397" "062y" "Dinaric" "Dinaric" "Mortality" "Slovenia" NA NA FALSE 1 "Tissue" "7.12.2003" 42 "2 2" NA "F" 0 0.998 0.998 485953 60634
+"427" "74F" "Dinaric" "Dinaric" "Mortality" "Slovenia" NA NA FALSE 0.912585 "Tissue" "25.02.2010" 42 "1 2" "1 1" "M" -1 0.998 0.998 487971 46598
+"474" "AP.08E6" "Dinaric" "Dinaric" "Mortality" "Slovenia" "Rog" "-" FALSE 0.895238 "Tissue" "12.01.2011" 42 "1 2" "1 1" "M" -1 0.998 0.9978 488000 46800
+"408" "400y" "Dinaric" "Dinaric" "Mortality" "Slovenia" NA NA FALSE 0.97619 "Tissue" "4.11.2006" 42 "2 2" NA "F" 0 0.998 0.9972 497869 56947
+"402" "309y" "Dinaric" "Dinaric" "Mortality" "Slovenia" NA NA FALSE 0.958333 "Tissue" "17.12.2005" 42 "1 2" "1 1" "M" 0 0.998 0.998 499493 55165
+"422" "581y" "Dinaric" "Dinaric" "Mortality" "Slovenia" NA NA FALSE 0.97619 "Tissue" "13.12.2007" 42 "1 2" "1 1" "M" 0 0.998 0.998 499834 56626
+"403" "310y" "Dinaric" "Dinaric" "Mortality" "Slovenia" NA NA FALSE 0.970238 "Tissue" "12.12.2005" 42 "1 2" "1 1" "M" 0 0.998 0.998 500023 57552
+"426" "703y" "Dinaric" "Dinaric" "Mortality" "Slovenia" NA NA FALSE 0.97619 "Tissue" "24.01.2009" 42 "2 2" NA "F" 0 0.998 0.998 500306 57285
+"714" "AP.08E5" "Dinaric" "Dinaric" "Mortality" "Slovenia" "Gomance" "-" FALSE 0.956349 "Tissue" "17.01.2011" 42 "1 2" "1 1" "M" -1 0.998 0.9982 501060 55530
+"717" "AP.08EK" "Dinaric" "Dinaric" "Mortality" "Slovenia" "Neznano" "Poljanska gora" TRUE 0.97619 "Tissue" "21.08.2009" 42 "1 2" "1 1" "M" 0 0.998 0.998 501150 48530
+"409" "414y" "Dinaric" "Dinaric" "Mortality" "Slovenia" NA NA FALSE 0.924603 "Tissue" "11.09.2006" 42 "2 2" NA "F" 0 0.998 0.998 506960 67583
+"394" "052y" "Dinaric" "Dinaric" "Mortality" "Slovenia" NA NA FALSE 0.977381 "Tissue" "26.07.2003" 42 "2 2" NA "F" 0 0.9981 0.998 440098 61233
+"448" "AP.08CK" "Dinaric" "Dinaric" "Mortality" "Slovenia" "Gomance" "Meni‹ija" TRUE 0.952381 "Tissue" "7.03.2011" 42 "2 2" NA "F" -1 0.9981 0.998 451602 73748
+"761" "CH.0LY5" "Dinaric" "Dinaric" "Mortality" "Slovenia" "Slavnik" "-" FALSE 0.882114 "Tissue" "29.10.2012" 41 "2 2" NA "F" 0 0.9982 0.998 422360 44040
+"416" "532y" "Dinaric" "Dinaric" "Mortality" "Slovenia" NA NA FALSE 0.97619 "Tissue" "14.09.2007" 42 "1 2" "1 1" "M" 0 0.9982 0.998 442202 56720
+"407" "399y" "Dinaric" "Dinaric" "Mortality" "Slovenia" NA NA FALSE 0.97619 "Tissue" "4.11.2006" 42 "2 2" NA "F" 0 0.9982 0.998 501434 58114
+"476" "AP.08E2" "Dinaric" "Dinaric" "Mortality" "Slovenia" "Gomance" "-" FALSE 0.957143 "Tissue" "12.12.2010" 42 "1 2" "1 1" "M" -1 0.9983 0.9982 448046 46858
+"413" "439y" "Dinaric" "Dinaric" "Mortality" "Slovenia" NA NA FALSE 0.97619 "Tissue" "20.12.2006" 42 "1 2" "1 1" "M" 0 0.9983 0.998 501444 56495
+"400" "206y" "Dinaric" "Dinaric" "Mortality" "Slovenia" NA NA FALSE 0.958333 "Tissue" "22.12.2004" 42 "2 2" NA "F" 0 0.9984 0.998 453539 53546
+"392" "050y" "Dinaric" "Dinaric" "Mortality" "Slovenia" NA NA FALSE 0.97619 "Tissue" "11.06.2003" 42 "2 2" NA "F" 0 0.9984 0.9982 456265 53649
+"420" "54E" "Dinaric" "Dinaric" "Mortality" "Slovenia" NA NA FALSE 0.97619 "Tissue" "25.02.2010" 42 "1 2" "1 1" "M" 0 0.9985 0.9986 488064 46838
+"395" "053y" "Dinaric" "Dinaric" "Mortality" "Slovenia" NA NA FALSE 0.924206 "Tissue" "22.07.2003" 42 "2 2" NA "F" 0 0.9988 0.999 454678 51656
+"404" "311y" "Dinaric" "Dinaric" "Mortality" "Slovenia" NA NA FALSE 0.982143 "Tissue" "11.11.2005" 42 "2 2" NA "F" 0 0.9989 0.998 472256 53144
+"390" "001y" "Dinaric" "Dinaric" "Mortality" "Slovenia" NA NA FALSE 1 "Tissue" "9.02.2003" 42 "2 2" NA "F" 0 0.999 0.9988 447846 44112
+"417" "534y" "Dinaric" "Dinaric" "Mortality" "Slovenia" NA NA FALSE 0.97619 "Tissue" "25.10.2007" 42 "2 2" NA "F" 0 0.999 0.9986 485134 50395
+"639" "AP.086L" "Dinaric" "Dinaric" "Mortality" "Slovenia" "Mala gora" "-" FALSE 0.890244 "Tissue" "24.12.2012" 41 "2 2" NA "F" 0 0.999 0.999 486815 72490
+"471" "CH.0LLE" "Dinaric" "Dinaric" "Mortality-HR" "Slovenia" "Suha krajina" "-" FALSE 0.914634 "Tissue" "12.10.2012" 41 "1 2" "1 1" "M" -1 0.997 0.997 780621 79804
+"790" "AP.07MK" "Dinaric" "Dinaric" "MortalityMladici" "Slovenia" "Vrem‹ica" "-" FALSE 0.914634 "Tissue" "10.06.2013" 41 "2 2" NA "F" 0 0.989 0.99 437488 62038
+"787" "CY.12EL" "Dinaric" "Dinaric" "MortalityMladici" "Slovenia" "Slavnik" "-" FALSE 0.811508 "Hair" "3.06.2010" 42 "2 2" NA "F" 0 0.9973 0.9978 421342 43596
+"785" "AP.07MH" "Dinaric" "Dinaric" "MortalityMladici" "Slovenia" "Vrem‹ica" "-" FALSE 0.914634 "Tissue" "10.06.2013" 41 "2 2" NA "F" 0 0.998 0.998 437488 62038
+"786" "AP.07MF" "Dinaric" "Dinaric" "MortalityMladici" "Slovenia" "Vrem‹ica" "-" FALSE 0.914634 "Tissue" "10.06.2013" 41 "2 2" NA "F" 0 0.998 0.998 437488 62038
+"457" "AX.0E7C" "Dinaric" "Dinaric" "Noninvasive - SLO" "Slovenia" "Vrem‹ica" "-" FALSE 0.759375 "Scat" "14.02.2012" 40 "1 2" "1 1" "M" -1 0.997 0.996 430779 71275
+"733" "AX.0CTF" "Dinaric" "Dinaric" "Noninvasive - SLO" "Slovenia" "Lika" "-" FALSE 0.748649 "Scat" "10.12.2012" 37 "1 2" "1 1" "M" -1 0.9965 0.9964 466180 59760
+"727" "AU.0C6C" "Dinaric" "Dinaric" "Noninvasive - SLO" "Slovenia" "Slavnik" "-" FALSE 0.661905 "Scat" "1.04.2010" 42 "1 2" "1 1" "M" 0 0.998 0.998 419712 48365
+"725" "AU.0C24" "Dinaric" "Dinaric" "Noninvasive - SLO" "Slovenia" "Slavnik" "-" FALSE 0.85307 "Scat" "19.10.2010" 38 "2 2" NA "F" 0 0.9983 0.998 420247 46360
+"724" "AU.0C3M" "Dinaric" "Dinaric" "Noninvasive - SLO" "Slovenia" "Unknown" "Javorniki/Snje?nik" TRUE 0.606548 "Scat" "28.05.2010" 42 "2 2" NA "F" -1 0.9954 0.996 459663 54377
+"469" "AU.0APF" "Dinaric" "Dinaric" "Noninvasive - SLO" "Slovenia" "Snje?nik" "Suha krajina" TRUE 0.632993 "Scat" "25.01.2011" 42 "2 2" NA "F" -1 0.998 0.998 480957 76243
+"734" "AX.0CU4" "Dinaric" "Dinaric" "Noninvasive - SLO" "Slovenia" "Gomance" "-" FALSE 0.966216 "Scat" "26.01.2013" 37 "1 2" "1 1" "M" 0 0.998 0.998 446043 51505
+"453" "AL.05UP" "Dinaric" "Dinaric" "Noninvasive - SLO" "Slovenia" "Vrem‹ica" "-" FALSE 0.914414 "Urine" "17.03.2013" 37 "1 1" "1 1" "M" -1 0.998 0.998 448209 53055
+"452" "AU.0C70" "Dinaric" "Dinaric" "Noninvasive - SLO" "Slovenia" "Slavnik" "-" FALSE 0.634921 "Scat" "1.04.2010" 42 "1 2" "1 1" "M" -1 0.9776 0.978 419664 48462
+"740" "AX.0E4X" "Dinaric" "Dinaric" "Noninvasive - SLO" "Slovenia" "Mala gora" "-" FALSE 0.95 "Scat" "15.02.2012" 40 "2 2" NA "F" -1 0.9881 0.9846 488177 66108
+"462" "AL.0611" "Dinaric" "Dinaric" "Noninvasive - SLO" "Slovenia" "Vrem‹ica" "-" FALSE 1 "Urine" "13.12.2012" 37 "1 2" "1 1" "M" -1 0.9951 0.996 429445 65961
+"718" "AU.0AEK" "Dinaric" "Dinaric" "Noninvasive - SLO" "Slovenia" "Lika" "-" FALSE 0.846032 "Scat" "6.05.2011" 42 "1 2" "1 1" "M" 0 0.9955 0.9888 470575 66245
+"730" "AX.0CCE" "Dinaric" "Dinaric" "Noninvasive - SLO" "Slovenia" "Mala gora" "-" FALSE 0.986486 "Scat" "23.03.2013" 37 "1 2" "1 1" "M" -1 0.997 0.997 448677 85529
+"454" "AX.0E1E" "Dinaric" "Dinaric" "Noninvasive - SLO" "Slovenia" "Neznano" "-" FALSE 0.9375 "Scat" "17.06.2012" 40 "1 2" "1 1" "M" -1 0.997 0.997 457030 57323
+"430" "AL.06H8" "Dinaric" "Dinaric" "Noninvasive - SLO" "Slovenia" "Javorniki" "Mala gora" TRUE 0.836735 "Urine" "28.12.2010" 42 "1 2" "1 1" "M" -1 0.997 0.997 489622 63309
+"442" "AX.0E1C" "Dinaric" "Dinaric" "Noninvasive - SLO" "Slovenia" "Rog" "-" FALSE 0.972973 "Scat" "2.07.2012" 37 "1 2" "1 1" "M" -1 0.997 0.997 503803 54904
+"739" "AX.0E48" "Dinaric" "Dinaric" "Noninvasive - SLO" "Slovenia" "Vrem‹ica" "-" FALSE 0.95 "Scat" "17.04.2012" 40 "1 2" "1 1" "M" -1 0.9971 0.997 429947 73416
+"449" "AL.068M" "Dinaric" "Dinaric" "Noninvasive - SLO" "Slovenia" "Neznano" "Meni‹ija" TRUE 0.96875 "Urine" "11.02.2011" 40 "1 2" "1 1" "M" -1 0.9972 0.9978 455896 72111
+"460" "AL.05YP" "Dinaric" "Dinaric" "Noninvasive - SLO" "Slovenia" "Slavnik" "-" TRUE 1 "Urine" "11.12.2012" 37 "1 2" "1 1" "M" -1 0.9976 0.9972 422359 47462
+"464" "AL.061F" "Dinaric" "Dinaric" "Noninvasive - SLO" "Slovenia" "Slavnik" "-" FALSE 0.959459 "Urine" "13.12.2012" 37 "1 2" "1 1" "M" 0 0.9976 0.9978 423682 47226
+"459" "AL.05YH" "Dinaric" "Dinaric" "Noninvasive - SLO" "Slovenia" "Slavnik" "-" FALSE 1 "Urine" "11.12.2012" 37 "2 2" NA "F" 0 0.998 0.998 417919 49111
+"443" "AU.0C58" "Dinaric" "Dinaric" "Noninvasive - SLO" "Slovenia" "Slavnik" "-" FALSE 0.930417 "Scat" "26.11.2010" 40 "1 2" "1 1" "M" -1 0.998 0.998 420250 46738
+"429" "AU.0AEF" "Dinaric" "Dinaric" "Noninvasive - SLO" "Slovenia" "Neznano" "Slavnik" TRUE 0.919841 "Scat" "29.06.2011" 42 "2 2" NA "F" -1 0.998 0.998 421479 47421
+"732" "AX.0CTH" "Dinaric" "Dinaric" "Noninvasive - SLO" "Slovenia" "Slavnik" "-" FALSE 1 "Scat" "13.12.2012" 37 "2 2" NA "F" -1 0.998 0.998 423859 46760
+"470" "AU.0ACC" "Dinaric" "Dinaric" "Noninvasive - SLO" "Slovenia" "Vrem‹ica" "-" FALSE 0.825 "Scat" "14.02.2012" 40 "2 2" NA "F" -1 0.998 0.9982 430662 76412
+"438" "AU.0AEA" "Dinaric" "Dinaric" "Noninvasive - SLO" "Slovenia" "Vrem‹ica" "-" FALSE 0.895833 "Scat" "26.07.2011" 40 "2 2" NA "F" -1 0.998 0.998 439413 63152
+"741" "AX.0E5K" "Dinaric" "Dinaric" "Noninvasive - SLO" "Slovenia" "Javorniki" "-" FALSE 0.973684 "Scat" "24.02.2012" 38 "1 2" "1 1" "M" 0 0.998 0.998 443733 52617
+"738" "AX.0E55" "Dinaric" "Dinaric" "Noninvasive - SLO" "Slovenia" "Javorniki" "-" FALSE 0.816667 "Scat" "23.05.2012" 40 "2 2" NA "F" -1 0.998 0.998 444877 55041
+"728" "AU.0C8L" "Dinaric" "Dinaric" "Noninvasive - SLO" "Slovenia" NA NA FALSE 0.855726 "Scat" "13.01.2009" 42 "2 2" NA "F" 0 0.998 0.998 447428 44725
+"455" "AL.05UY" "Dinaric" "Dinaric" "Noninvasive - SLO" "Slovenia" "Slavnik" "Meni‹ija" TRUE 1 "Urine" "24.03.2013" 37 "1 2" "1 1" "M" -1 0.998 0.998 449020 84868
+"439" "AL.06AM" "Dinaric" "Dinaric" "Noninvasive - SLO" "Slovenia" "Vrem‹ica" "Javorniki" TRUE 1 "Urine" "23.02.2011" 38 "1 2" "1 1" "M" -1 0.998 0.998 453090 52062
+"467" "AX.0E5T" "Dinaric" "Dinaric" "Noninvasive - SLO" "Slovenia" "Neznano" "-" FALSE 0.870833 "Scat" "27.12.2011" 40 "1 2" "1 1" "M" -1 0.998 0.998 456207 57365
+"461" "AL.0607" "Dinaric" "Dinaric" "Noninvasive - SLO" "Slovenia" "Neznano" "Gotenica" TRUE 1 "Urine" "1.03.2013" 37 "1 2" "1 1" "M" -1 0.998 0.998 480068 55576
+"472" "AU.0C0M" "Dinaric" "Dinaric" "Noninvasive - SLO" "Slovenia" "Snje?nik" "-" FALSE 0.826909 "Scat" "19.02.2011" 42 "1 2" "1 1" "M" -1 0.998 0.9982 482527 52145
+"441" "AU.0C0X" "Dinaric" "Dinaric" "Noninvasive - SLO" "Slovenia" "Snje?nik" "Gotenica" TRUE 0.896825 "Scat" "8.02.2011" 42 "2 2" NA "F" -1 0.998 0.998 485838 55476
+"440" "AU.0AJ0" "Dinaric" "Dinaric" "Noninvasive - SLO" "Slovenia" "Rog" "Rog" TRUE 0.795163 "Scat" "8.06.2011" 42 "2 2" NA "F" -1 0.998 0.998 502938 55811
+"473" "AL.068T" "Dinaric" "Dinaric" "Noninvasive - SLO" "Slovenia" "Poljanska Gora" "Poljanska Gora" TRUE 0.903175 "Urine" "3.12.2010" 42 "2 2" NA "F" -1 0.998 0.998 505756 40701
+"719" "AU.0AJ7" "Dinaric" "Dinaric" "Noninvasive - SLO" "Slovenia" "Neznano" "Poljanska Gora" TRUE 0.854762 "Scat" "10.06.2011" 42 "1 2" "1 1" "M" -1 0.998 0.998 509526 38748
+"762" "CY.12ET" "Dinaric" "Dinaric" "Noninvasive - SLO" "Slovenia" NA NA FALSE 0.875709 "Hair" "14.01.2010" 42 "2 2" NA "F" 0 0.9981 0.998 507318 48179
+"466" "AL.0635" "Dinaric" "Dinaric" "Noninvasive - SLO" "Slovenia" "Gomance" "-" FALSE 1 "Urine" "26.01.2013" 37 "1 2" "1 1" "M" 0 0.9982 0.998 445250 51945
+"723" "AU.0AUH" "Dinaric" "Dinaric" "Noninvasive - SLO" "Slovenia" "Javorniki" "-" FALSE 0.881579 "Scat" "17.05.2010" 38 "1 2" "1 1" "M" 0 0.9985 0.9982 455047 52902
+"458" "AL.06H1" "Neznano" "Dinaric" "Noninvasive - SLO" "Slovenia" "Neznano" "Jelovica" FALSE 0.375595 "Urine" "21.12.2010" 42 "1 2" "1 1" "M" -1 NA 0.9908 429316 126457
+"746" "AY.0F54" "Dinaric" "Dinaric" "Slo+USA" "Slovenia" "Gotenica" "-" FALSE 0.986486 "Scat" "16.07.2013" 37 "1 2" "1 1" "M" -1 0.998 0.998 476439 58403
+"745" "AY.0F37" "Dinaric" "Dinaric" "Slo+USA" "Slovenia" "Slavnik" "-" FALSE 0.972973 "Scat" "5.07.2013" 37 "2 2" NA "F" 0 0.9985 0.998 448790 50789
+"770" "EE.14PY" "Dinaric" "Dinaric" "Telemetry" "Slovenia" "Gotenica" "-" FALSE 0.972973 "Direct Saliva" "6.08.2013" 37 "1 2" "1 1" NA 0 0.9981 0.998 441037 63059
+"771" "EE.14T0" "Dinaric" "Dinaric" "Telemetry" "Slovenia" "Gotenica" "-" FALSE 0.914414 "Direct Saliva" "6.08.2013" 37 "2 2" NA NA 0 0.997 0.9978 475362 59657
+"635" "EE.156M" "Dinaric" "Dinaric" "Telemetry" "Slovenia" "Rog" "-" FALSE 0.933333 "Direct Saliva" "5.07.2012" 40 "2 2" NA NA -1 0.9978 0.998 504742 54279
+"437" "AH.038C" "Dinaric" "Dinaric" "Telemetry" "Slovenia" "Slavnik" "-" FALSE 0.97619 "Direct Saliva" "17.07.2011" 42 "1 2" "1 1" "M" -1 0.998 0.998 419071 44413
+"446" "AH.03HA" "Dinaric" "Dinaric" "Telemetry" "Slovenia" "Vrem‹ica" "-" FALSE 0.934524 "Direct Saliva" "6.05.2011" 42 "1 2" "1 1" "M" -1 0.998 0.998 419775 48653
+"769" "EE.14LK" "Dinaric" "Dinaric" "Telemetry" "Slovenia" "Meni‹ija" "-" FALSE 1 "Direct Saliva" "5.09.2013" 37 "1 2" "1 1" NA 0 0.998 0.9984 447917 81974
+"768" "EE.14LJ" "Dinaric" "Dinaric" "Telemetry" "Slovenia" "Meni‹ija" "-" FALSE 0.986486 "Direct Saliva" "5.09.2013" 37 "1 2" "1 1" NA 0 0.998 0.998 448919 82080
+"726" "TINA" "Dinaric" "Dinaric" "Telemetry" "Slovenia" "Javorniki" "-" FALSE 0.656841 "Blood" "1.09.2008" 42 "2 2" NA NA -1 0.998 0.9978 449386 58214
+"431" "AH.0388" "Dinaric" "Dinaric" "Telemetry" "Slovenia" "Gotenica" "-" FALSE 0.958333 "Direct Saliva" "27.08.2011" 40 "1 2" "1 1" "M" -1 0.998 0.998 475503 59611
+"772" "EE.14T1" "Dinaric" "Dinaric" "Telemetry" "Slovenia" "Gotenica" "-" FALSE 0.963964 "Direct Saliva" "6.08.2013" 37 "1 2" "1 1" NA 0 0.998 0.987 476268 59294

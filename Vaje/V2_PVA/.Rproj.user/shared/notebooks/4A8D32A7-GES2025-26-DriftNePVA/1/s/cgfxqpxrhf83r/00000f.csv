@@ -1,0 +1,3 @@
+"0","Fitness = 1-(0.25*Fe$Fe/0.1)"
+"0","Fitness = data.frame (year=floor(Fe$year),Fitness)"
+"0","Fitness"
