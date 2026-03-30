@@ -1,0 +1,15 @@
+cff-version: 1.2.0
+title: 'Uvod v varstveno genetiko, učno gradivo'
+message: >-
+  If you use this, please cite it using the
+  metadata from this file.
+type: software
+authors:
+  - given-names: Tomaž
+    family-names: Skrbinšek
+    email: tomaz.skrbinsek@bf.uni-lj.si
+    orcid: 'https://orcid.org/0000-0003-4435-7477'
+    affiliation: 'University of Ljubljana, Biotechnical Faculty'
+abstract: >-
+ Zbrano učno gradivo, ki pokriva uvod v varstveno genetiko (Conservation Genetics). Gradivo nastaja v okviru predmeta "Genetika v ekologiji in sistematiki". R Markdown koda z navodili, predavanja. Učna gradiva osvežujem tekom vsakega šolskega leta, ko predmet izvajamo
+license: CC-BY-4.0
