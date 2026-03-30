@@ -1,4 +1,4 @@
-# Uvod v varstveno genetiko, študijsko gradivo
+# Uvod v varstveno genetiko, učno gradivo
 
 **Univerza v Ljubljani, Biotehniška fakulteta**
 
@@ -14,7 +14,7 @@
 
 ### Vsebina
 
-Tukaj so zbrani učni materiali, ki pokrivajo uvod v varstveno genetiko (Conservation Genetics). Materiali nastajajo v okviru predmeta "Genetika v ekologiji in sistematiki". Učne materiale osvežujem tekom vsakega šolskega leta, ko predmet izvajamo. Predavanja se (ohlapno) nanašajo na vaje (npr predavanje 1 - vaja 1 itd.)
+Tukaj je zbrano učno gradivo, ki pokriva uvod v varstveno genetiko (Conservation Genetics). Gradivo nastaja v okviru predmeta "Genetika v ekologiji in sistematiki". Učno gradivo osvežujem tekom vsakega šolskega leta, ko predmet izvajamo. Predavanja se (ohlapno) nanašajo na vaje (npr predavanje 1 - vaja 1 itd.)
 
 Danes se soočamo z globalno krizo biodiverzitete. Odgovor znanosti je varstvena biologija, aplikativna veda, katere cilj je ohranjanje biodiverzitete. Po drugi strani doživljamo v zadnjih desetletjih razcvet molekularne genetike, ki je verjetno ena najbolj dinamičnih vej celotne znanosti. 
 
